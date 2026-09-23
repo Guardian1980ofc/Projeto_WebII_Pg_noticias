@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web News - Reviews</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Configuração do Tailwind CSS -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'roxo-profundo': '#1a0b2e',
+                        'roxo-header': '#321555',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-roxo-profundo text-white">
+
+    <header class="bg-roxo-header px-6 py-4">
+        <nav class="flex items-center justify-between">
+
+            <a href="index.html" class="text-2xl font-bold no-underline hover:text-purple-300 transition">
+                Web News
+            </a>
+
+            <ul class="flex items-center gap-2 list-none">
+
+                <li>
+                    <a href="index.html"
+                        class="no-underline px-3 py-2 rounded-lg text-purple-100 hover:bg-purple-100 hover:text-purple-950 transition">
+                        🏠 Início
+                    </a>
+                </li>
+
+                <li>
+                    <a href="reviews.html"
+                        class="no-underline px-3 py-2 rounded-lg bg-purple-100 text-purple-950 font-bold transition">
+                        ⭐ Reviews
+                    </a>
+                </li>
+                <li>
+                    <a href="videos.html"
+                        class="no-underline px-3 py-2 rounded-lg text-purple-100 hover:bg-purple-100 hover:text-purple-950 transition">
+                        🎬 Vídeos
+                    </a>
+                </li>
+                <li>
+                    <a href="esports.html"
+                        class="no-underline px-3 py-2 rounded-lg text-purple-100 hover:bg-purple-100 hover:text-purple-950 transition">
+                        🎮 eSports
+                    </a>
+                </li>
+                <li>
+                    <a href="pc.html"
+                        class="no-underline px-3 py-2 rounded-lg text-purple-100 hover:bg-purple-100 hover:text-purple-950 transition">
+                        💻 PC
+                    </a>
+                </li>
+                <li>
+                    <a href="credits.html"
+                        class="no-underline px-3 py-2 rounded-lg text-purple-100 hover:bg-purple-100 hover:text-purple-950 transition">
+                        👤 Credits
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 py-8">
+        <h1 class="text-4xl font-bold">Reviews de Games</h1>
+    </main>
+
+</body>
+
+</html>

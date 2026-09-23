@@ -5,23 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web News - Notícias de Games</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Configuração do Tailwind CSS -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'roxo-profundo': '#1a0b2e',
+                        'roxo-header': '#321555',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
-<body class="bg-purple-950 text-white">
+<body class="bg-roxo-profundo text-white">
 
-    <header class="bg-purple-900 px-6 py-4">
+    <header class="bg-roxo-header px-6 py-4">
         <nav class="flex items-center justify-between">
 
-            <!-- Logo / nome do site -->
             <a href="index.html" class="text-2xl font-bold no-underline hover:text-purple-300 transition">
                 Web News
             </a>
 
-            <!-- Menu de navegação -->
             <ul class="flex items-center gap-2 list-none">
 
-                <!-- Início: ATIVO (página atual) -->
                 <li>
                     <a href="index.html"
                         class="no-underline px-3 py-2 rounded-lg bg-purple-100 text-purple-950 font-bold transition">
@@ -29,7 +41,6 @@
                     </a>
                 </li>
 
-                <!-- Demais: normais com hover -->
                 <li>
                     <a href="reviews.html"
                         class="no-underline px-3 py-2 rounded-lg text-purple-100 hover:bg-purple-100 hover:text-purple-950 transition">
