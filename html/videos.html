@@ -76,8 +76,55 @@
         </nav>
     </header>
 
-    <main>
-        <!-- conteúdo da página Início vai aqui -->
+    <main class="max-w-7xl mx-auto px-6 py-10">
+    
+        <!-- Título -->
+        <h1 class="text-5xl md:text-6xl font-extrabold mb-8">Vídeos</h1>
+    
+        <!-- Vídeo em destaque -->
+        <!-- Vídeo em destaque -->
+        <section class="mb-12">
+        
+            <!-- Card do vídeo clicável -->
+            <a href="https://www.youtube.com/watch?v=tJbzMqJGH4k" target="_blank" rel="noopener noreferrer"
+                class="block relative aspect-video rounded-2xl overflow-hidden shadow-2xl group">
+        
+                <!-- Thumbnail do vídeo -->
+                <img src="https://img.youtube.com/vi/tJbzMqJGH4k/maxresdefault.jpg" alt="Grand Theft Auto VI: An Extended Look"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        
+                <!-- Overlay escuro -->
+                <div class="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition"></div>
+        
+                <!-- Botão de play -->
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <div
+                        class="bg-purple-600 rounded-full w-24 h-24 flex items-center justify-center shadow-2xl group-hover:scale-110 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-12 h-12 ml-1">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
+                </div>
+        
+            </a>
+        
+            <!-- Título do vídeo embaixo, com tema de VICE CITY -->
+            <h2
+                class="text-2xl md:text-3xl font-bold mt-6 bg-gradient-to-r from-pink-500 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                Grand Theft Auto VI: An Extended Look
+            </h2>
+            <p class="mt-2 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Rockstar Games revela novo olhar estendido do jogo mais aguardado da década.
+            </p>
+        
+        </section>
+
+        <!-- Seção "Mais Vídeos" (pra preencher depois) -->
+        <section>
+            <h2 class="text-3xl font-bold mb-6">Mais Vídeos</h2>
+            <!-- cards de vídeo aqui (próximo passo) -->
+        </section>
+    
     </main>
 
 </body>
