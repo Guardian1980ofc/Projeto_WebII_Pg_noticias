@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web News - Reviews</title>
+    <title>Reviews - Web News</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -25,6 +25,7 @@
 
 <body class="bg-roxo-profundo text-white">
 
+    <!-- ==================== HEADER ==================== -->
     <header class="bg-roxo-header px-6 py-4">
         <nav class="flex items-center justify-between">
 
@@ -40,7 +41,6 @@
                         🏠 Início
                     </a>
                 </li>
-
                 <li>
                     <a href="reviews.html"
                         class="no-underline px-3 py-2 rounded-lg bg-purple-100 text-purple-950 font-bold transition">
@@ -76,8 +76,153 @@
         </nav>
     </header>
 
-    <main class="max-w-7xl mx-auto px-6 py-8">
-        <h1 class="text-4xl font-bold">Reviews de Games</h1>
+    <!-- ==================== MAIN ==================== -->
+    <main class="max-w-7xl mx-auto px-6 py-10">
+
+        <!-- Título da página -->
+        <h1 class="text-5xl md:text-6xl font-extrabold mb-8">
+            Reviews
+        </h1>
+
+        <!-- ============ REVIEW EM DESTAQUE ============ -->
+        <article class="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl mb-16">
+
+            <!-- Imagem de fundo -->
+            <img src="https://i.pinimg.com/736x/01/4d/b0/014db0c2cc251b3dc354221fa8be8302.jpg"
+                alt="Silent Hill: Townfall" class="absolute inset-0 w-full h-full object-cover">
+
+            <!-- Overlay escuro (gradiente de baixo pra cima) -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+
+            <!-- Link invisível cobrindo o card -->
+            <a href="noticias/silent-hill-townfall.html" class="absolute inset-0 z-10"
+                aria-label="Ler review completa de Silent Hill: Townfall"></a>
+
+            <!-- Nota da review (retângulo roxo) -->
+            <div class="absolute bottom-6 left-6 bg-purple-600 px-6 py-4 rounded-lg shadow-lg">
+                <div class="text-4xl font-bold leading-none">8</div>
+                <div class="text-xs uppercase tracking-wider mt-1 text-purple-100">Nota</div>
+            </div>
+
+        </article>
+
+        <!-- ============ LISTA DE REVIEWS ============ -->
+
+        <h2 class="text-3xl font-bold mb-6">Todas as Reviews</h2>
+        
+        <!-- review 3: Silent hill -->
+        <article class="flex gap-6 bg-roxo-header rounded-xl overflow-hidden hover:bg-purple-900 transition mb-6">
+        
+            <!-- Imagem com nota -->
+            <div class="relative w-64 h-36 flex-shrink-0">
+                <img src="https://i.pinimg.com/236x/80/a0/32/80a032c836e5fdf183afd962507fddc3.jpg" alt="Silent Hill: Townfall"
+                    class="w-full h-full object-cover">
+                <div class="absolute bottom-2 left-2 bg-purple-600 px-2 py-1 rounded text-sm font-bold leading-none">
+                    8
+                </div>
+            </div>
+        
+            <!-- Texto -->
+            <div class="flex-1 py-4 pr-4">
+                <h3 class="text-xl font-bold mb-2 leading-snug">
+                    Com 3 protagonistas e terror lovecraftiano, Silent Hill: Townfall tem narrativa contida e não brilha tanto
+                    dentro da franquia
+                </h3>
+                <p class="text-purple-200 text-sm mb-3">
+                    Ilha. Névoa. Tentáculos.
+                </p>
+                <div class="text-xs text-purple-300 flex gap-4">
+                    <span>🏷️ SILENT HILL: TOWNFALL</span>
+                    <span>👤 BÁRBARA CASTRO</span>
+                </div>
+            </div>
+        
+        </article>
+
+        <!-- Review 2: Wolverine -->
+        <article class="flex gap-6 bg-roxo-header rounded-xl overflow-hidden hover:bg-purple-900 transition mb-6">
+        
+            <!-- Imagem com nota -->
+            <div class="relative w-64 h-36 flex-shrink-0">
+                <img src="https://i.pinimg.com/736x/eb/45/ca/eb45ca08cd770b655276b8e2aa24721e.jpg" alt="Wolverine"
+                    class="w-full h-full object-cover">
+                <div class="absolute bottom-2 left-2 bg-purple-600 px-2 py-1 rounded text-sm font-bold leading-none">
+                    5
+                </div>
+            </div>
+        
+            <!-- Texto -->
+            <div class="flex-1 py-4 pr-4">
+                <h3 class="text-xl font-bold mb-2 leading-snug">
+                    Wolverine é uma decepção: gameplay repetitivo e história rasa marcam o retorno do mutante aos games
+                </h3>
+                <p class="text-purple-200 text-sm mb-3">
+                    Garras afiadas, gameplay cego.
+                </p>
+                <div class="text-xs text-purple-300 flex gap-4">
+                    <span>🏷️ WOLVERINE</span>
+                    <span>👤 RAFAEL MENDES</span>
+                </div>
+            </div>
+        
+        </article>
+
+        <!-- Review 3: 007 First Light -->
+        <article class="flex gap-6 bg-roxo-header rounded-xl overflow-hidden hover:bg-purple-900 transition mb-6">
+        
+            <!-- Imagem com nota -->
+            <div class="relative w-64 h-36 flex-shrink-0">
+                <img src="https://i.pinimg.com/736x/bb/f2/dd/bbf2dd2c174ea7e1f67e9d3a80274cff.jpg" alt="007 First Light"
+                    class="w-full h-full object-cover object-top">
+                <div class="absolute bottom-2 left-2 bg-purple-600 px-2 py-1 rounded text-sm font-bold leading-none">
+                    9
+                </div>
+            </div>
+        
+            <!-- Texto -->
+            <div class="flex-1 py-4 pr-4">
+                <h3 class="text-xl font-bold mb-2 leading-snug">
+                    007 First Light é uma aula de espionagem e já entra na disputa pelo GOTY
+                </h3>
+                <p class="text-purple-200 text-sm mb-3">
+                    O agente secreto em sua melhor forma.
+                </p>
+                <div class="text-xs text-purple-300 flex gap-4">
+                    <span>🏷️ 007 FIRST LIGHT</span>
+                    <span>👤 ALEXANDRE</span>
+                </div>
+            </div>
+        
+        </article>
+
+        <!-- Review 4: Control Resonant -->
+        <article class="flex gap-6 bg-roxo-header rounded-xl overflow-hidden hover:bg-purple-900 transition">
+        
+            <!-- Imagem com nota -->
+            <div class="relative w-64 h-36 flex-shrink-0">
+                <img src="https://i.pinimg.com/736x/2d/57/8c/2d578c94ea2cc6771cda18360b47bd0f.jpg" alt="Control Resonant" class="w-full h-full object-cover object-top">
+                <div class="absolute bottom-2 left-2 bg-purple-600 px-2 py-1 rounded text-sm font-bold leading-none">
+                    9
+                </div>
+            </div>
+        
+            <!-- Texto -->
+            <div class="flex-1 py-4 pr-4">
+                <h3 class="text-xl font-bold mb-2 leading-snug">
+                    Control Resonant é mais uma prova da genialidade da Remedy e mostra que o céu é o limite para a
+                    desenvolvedora
+                </h3>
+                <p class="text-purple-200 text-sm mb-3">
+                    Mais um excelente jogo de 2026.
+                </p>
+                <div class="text-xs text-purple-300 flex gap-4">
+                    <span>🏷️ CONTROL RESONANT</span>
+                    <span>👤 VITOR CONCEIÇÃO</span>
+                </div>
+            </div>
+        
+        </article>
+
     </main>
 
 </body>
