@@ -8,14 +8,14 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Configuração do Tailwind CSS -->
+    <!-- Configuração do Tailwind CSS (Tema Azul) -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'roxo-profundo': '#1a0b2e',
-                        'roxo-header': '#321555',
+                        'azul-profundo': '#0a0f1d',
+                        'azul-header': '#172554',
                     }
                 }
             }
@@ -23,151 +23,213 @@
     </script>
 </head>
 
-<body class="bg-roxo-profundo text-white">
+<body class="bg-azul-profundo text-white min-h-screen flex">
 
-    <header class="bg-roxo-header px-6 py-4">
-        <nav class="flex items-center justify-between">
+    <!-- ==================== BARRA LATERAL (SIDEBAR LEFT) ==================== -->
+    <aside class="w-64 bg-azul-header min-h-screen shrink-0 p-5 border-r border-blue-900/40 flex flex-col justify-between sticky top-0 h-screen overflow-y-auto">
+        <div>
+            <!-- Header do Menu com Logo e Botão Recolher -->
+            <div class="flex items-center justify-between mb-8 pb-4 border-b border-blue-900/60">
+                <a href="index.html" class="text-2xl font-black text-white hover:text-blue-300 transition no-underline tracking-tight">
+                    Web News
+                </a>
+                <button class="text-blue-300 hover:text-white p-1 rounded-lg hover:bg-blue-900/50 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+            </div>
 
-            <a href="index.html" class="text-2xl font-bold no-underline hover:text-purple-300 transition">
-                Web News
-            </a>
+            <!-- Links de Navegação Vertical -->
+            <nav>
+                <ul class="space-y-1 list-none m-0 p-0">
+                    <li>
+                        <a href="index.html" class="flex items-center px-4 py-3 rounded-xl font-bold transition bg-blue-100 text-blue-950 no-underline">
+                            Início
+                        </a>
+                    </li>
+                    <li>
+                        <a href="reviews.html" class="flex items-center px-4 py-3 rounded-xl font-semibold transition text-blue-100 hover:bg-blue-900/60 hover:text-white no-underline">
+                            Reviews
+                        </a>
+                    </li>
+                    <li>
+                        <a href="videos.html" class="flex items-center px-4 py-3 rounded-xl font-semibold transition text-blue-100 hover:bg-blue-900/60 hover:text-white no-underline">
+                            Vídeos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="esports.html" class="flex items-center px-4 py-3 rounded-xl font-semibold transition text-blue-100 hover:bg-blue-900/60 hover:text-white no-underline">
+                            eSports
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pc.html" class="flex items-center px-4 py-3 rounded-xl font-semibold transition text-blue-100 hover:bg-blue-900/60 hover:text-white no-underline">
+                            PC
+                        </a>
+                    </li>
+                    <li>
+                        <a href="credits.html" class="flex items-center px-4 py-3 rounded-xl font-semibold transition text-blue-100 hover:bg-blue-900/60 hover:text-white no-underline">
+                            Credits
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
 
-            <ul class="flex items-center gap-2 list-none">
+        <!-- Campo de Busca na Parte Inferior do Menu -->
+        <div class="pt-6 border-t border-blue-900/60">
+            <div class="relative">
+                <input type="text" placeholder="Pesquisar notícias..." 
+                    class="w-full bg-blue-950/80 border border-blue-800/80 rounded-xl px-4 py-2.5 text-xs text-white placeholder-blue-300 focus:outline-none focus:border-blue-400 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 absolute right-3 top-3 text-blue-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+            </div>
+        </div>
+    </aside>
 
-                <li>
-                    <a href="index.html"
-                        class="no-underline px-3 py-2 rounded-lg bg-purple-100 text-purple-950 font-bold transition">
-                        🏠 Início
-                    </a>
-                </li>
+    <!-- ==================== CONTEÚDO PRINCIPAL (MAIN CONTENT) ==================== -->
+    <main class="flex-1 p-8 lg:p-10 overflow-y-auto max-w-7xl">
 
-                <li>
-                    <a href="reviews.html"
-                        class="no-underline px-3 py-2 rounded-lg text-purple-100 hover:bg-purple-100 hover:text-purple-950 transition">
-                        ⭐ Reviews
-                    </a>
-                </li>
-                <li>
-                    <a href="videos.html"
-                        class="no-underline px-3 py-2 rounded-lg text-purple-100 hover:bg-purple-100 hover:text-purple-950 transition">
-                        🎬 Vídeos
-                    </a>
-                </li>
-                <li>
-                    <a href="esports.html"
-                        class="no-underline px-3 py-2 rounded-lg text-purple-100 hover:bg-purple-100 hover:text-purple-950 transition">
-                        🎮 eSports
-                    </a>
-                </li>
-                <li>
-                    <a href="pc.html"
-                        class="no-underline px-3 py-2 rounded-lg text-purple-100 hover:bg-purple-100 hover:text-purple-950 transition">
-                        💻 PC
-                    </a>
-                </li>
-                <li>
-                    <a href="credits.html"
-                        class="no-underline px-3 py-2 rounded-lg text-purple-100 hover:bg-purple-100 hover:text-purple-950 transition">
-                        👤 Credits
-                    </a>
-                </li>
+        <!-- ============ SEÇÃO 1: DESTAQUES PRINCIPAIS (GRID DE 4 COLUNAS ALTAS) ============ -->
+        <section class="mb-14">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
 
-            </ul>
-        </nav>
-    </header>
-
-    <!-- ==================== MAIN ==================== -->
-    <main class="max-w-7xl mx-auto px-6 py-10">
-
-        <!-- ============ SEÇÃO DE DESTAQUES ============ -->
-        <section class="mb-12">
-            
-            <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mt-3 mb-4">Destaque</h1>
-
-            <div class="grid grid-cols-4 gap-4">
-
-                <!-- ====== CARD 1: The Witcher 3 ====== -->
-                <article class="card-noticia relative h-[450px] rounded-2xl overflow-hidden shadow-2xl">
+                <!-- CARD 1: The Witcher 3 -->
+                <article class="relative h-[440px] rounded-2xl overflow-hidden shadow-2xl group cursor-pointer border border-blue-900/30">
                     <img src="https://i.pinimg.com/736x/28/66/b4/2866b46869a99deb4f09ca23ca39d948.jpg"
                         alt="The Witcher 3"
-                        class="card-imagem absolute inset-0 w-full h-full object-cover transition-transform duration-500">
+                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
 
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
 
                     <a href="noticias/witcher-3-remaster.html" class="absolute inset-0 z-10"
                         aria-label="Ler notícia completa sobre The Witcher 3 Remastered"></a>
 
-                    <div class="absolute bottom-0 left-0 right-0 p-4">
-                        <h3 class="text-lg font-bold leading-tight">
+                    <div class="absolute bottom-0 left-0 right-0 p-5 bg-blue-950/80 backdrop-blur-sm border-t border-blue-900/50">
+                        <h3 class="text-sm md:text-base font-bold leading-snug text-white group-hover:text-blue-300 transition">
                             Horários de lançamento da versão remasterizada de The Witcher 3: Wild Hunt são confirmados
                         </h3>
                     </div>
                 </article>
 
-                <!-- ====== CARD 2: Halo ====== -->
-                <article class="card-noticia relative h-[450px] rounded-2xl overflow-hidden shadow-2xl">
+                <!-- CARD 2: Halo -->
+                <article class="relative h-[440px] rounded-2xl overflow-hidden shadow-2xl group cursor-pointer border border-blue-900/30">
                     <img src="https://i.pinimg.com/736x/1f/91/1c/1f911cc75cbffd759cd923b3ecc695d1.jpg" alt="Halo"
-                        class="card-imagem absolute inset-0 w-full h-full object-cover transition-transform duration-500">
+                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
 
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
 
                     <a href="noticias/halo-activision.html" class="absolute inset-0 z-10"
                         aria-label="Ler notícia completa sobre Halo e Activision"></a>
 
-                    <div class="absolute bottom-0 left-0 right-0 p-4">
-                        <h3 class="text-lg font-bold leading-tight">
+                    <div class="absolute bottom-0 left-0 right-0 p-5 bg-blue-950/80 backdrop-blur-sm border-t border-blue-900/50">
+                        <h3 class="text-sm md:text-base font-bold leading-snug text-white group-hover:text-blue-300 transition">
                             Halo com Activision faz sentido comercialmente, mas é suficiente para salvar a franquia?
                         </h3>
                     </div>
                 </article>
 
-                <!-- ====== CARD 3: Rayman ====== -->
-                <article class="card-noticia relative h-[450px] rounded-2xl overflow-hidden shadow-2xl">
+                <!-- CARD 3: Rayman -->
+                <article class="relative h-[440px] rounded-2xl overflow-hidden shadow-2xl group cursor-pointer border border-blue-900/30">
                     <img src="https://i.pinimg.com/1200x/8a/af/9f/8aaf9f67bc0ff1b1a8ea4429e9694817.jpg"
                         alt="Rayman Legends Retold"
-                        class="card-imagem absolute inset-0 w-full h-full object-cover transition-transform duration-500">
+                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
 
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
 
                     <a href="noticias/rayman-legends.html" class="absolute inset-0 z-10"
                         aria-label="Ler notícia completa sobre Rayman Legends Retold"></a>
 
-                    <div class="absolute bottom-0 left-0 right-0 p-4">
-                        <h3 class="text-lg font-bold leading-tight">
+                    <div class="absolute bottom-0 left-0 right-0 p-5 bg-blue-950/80 backdrop-blur-sm border-t border-blue-900/50">
+                        <h3 class="text-sm md:text-base font-bold leading-snug text-white group-hover:text-blue-300 transition">
                             Rayman Legends Retold inova sem perder a essência do original | Preview
                         </h3>
                     </div>
                 </article>
 
-                <!-- ====== CARD 4: Silent Hill ====== -->
-                <article class="card-noticia relative h-[450px] rounded-2xl overflow-hidden shadow-2xl">
+                <!-- CARD 4: Silent Hill -->
+                <article class="relative h-[440px] rounded-2xl overflow-hidden shadow-2xl group cursor-pointer border border-blue-900/30">
                     <img src="https://i.pinimg.com/736x/01/4d/b0/014db0c2cc251b3dc354221fa8be8302.jpg"
                         alt="Silent Hill Townfall"
-                        class="card-imagem absolute inset-0 w-full h-full object-cover transition-transform duration-500">
+                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
 
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
 
                     <a href="noticias/silent-hill-townfall.html" class="absolute inset-0 z-10"
                         aria-label="Ler notícia completa sobre Silent Hill Townfall"></a>
 
-                    <div class="absolute bottom-0 left-0 right-0 p-4">
-                        <h3 class="text-lg font-bold leading-tight">
+                    <div class="absolute bottom-0 left-0 right-0 p-5 bg-blue-950/80 backdrop-blur-sm border-t border-blue-900/50">
+                        <h3 class="text-sm md:text-base font-bold leading-snug text-white group-hover:text-blue-300 transition">
                             Silent Hill: Townfall tem narrativa contida e não brilha tanto dentro da franquia
                         </h3>
                     </div>
                 </article>
 
             </div>
+        </section>
 
-            <h2 class="text-4xl md:text-5xl font-extrabold leading-tight mt-3 mb-4">Notícias</h2>
+        <!-- ============ SEÇÃO 2: MAIS DESTAQUES ============ -->
+        <section class="mb-14">
+            <h2 class="text-3xl font-extrabold mb-6 text-white tracking-tight">Mais destaques</h2>
 
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- Item 1 -->
+                <a href="noticias/halo-activision.html" class="group no-underline block">
+                    <div class="overflow-hidden rounded-xl mb-3 h-44 border border-blue-900/40">
+                        <img src="https://i.pinimg.com/736x/12/37/a0/1237a0fa0c291f0eefb7f30da0d9aed4.jpg" 
+                            alt="Halo Campaign Evolved" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h3 class="text-sm font-bold text-white group-hover:text-blue-300 transition leading-snug">
+                        Halo: Campaign Evolved abre portas para reestruturações no ecossistema Xbox
+                    </h3>
+                </a>
+
+                <!-- Item 2 -->
+                <a href="noticias/rayman-legends.html" class="group no-underline block">
+                    <div class="overflow-hidden rounded-xl mb-3 h-44 border border-blue-900/40">
+                        <img src="https://i.pinimg.com/1200x/ae/69/72/ae697294bb7026d19b2615e2be8cac83.jpg" 
+                            alt="Rayman Fases Musicais" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h3 class="text-sm font-bold text-white group-hover:text-blue-300 transition leading-snug">
+                        Como as fases musicais de Rayman redefiniram o gênero de plataforma
+                    </h3>
+                </a>
+
+                <!-- Item 3 -->
+                <a href="noticias/silent-hill-townfall.html" class="group no-underline block">
+                    <div class="overflow-hidden rounded-xl mb-3 h-44 border border-blue-900/40">
+                        <img src="https://i.pinimg.com/736x/dc/aa/44/dcaa4413b64679a9b57fe6df6515c792.jpg" 
+                            alt="Silent Hill Terror" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h3 class="text-sm font-bold text-white group-hover:text-blue-300 transition leading-snug">
+                        Silent Hill retoma raízes do terror psicológico sem depender de combate
+                    </h3>
+                </a>
+
+                <!-- Item 4 -->
+                <a href="noticias/witcher-3-remaster.html" class="group no-underline block">
+                    <div class="overflow-hidden rounded-xl mb-3 h-44 border border-blue-900/40">
+                        <img src="https://i.pinimg.com/1200x/24/54/e4/2454e45b67b657e152d924a99c032d25.jpg" 
+                            alt="The Witcher 3 Remastered" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h3 class="text-sm font-bold text-white group-hover:text-blue-300 transition leading-snug">
+                        Tudo sobre as novidades gráficas e mecânicas da atualização de The Witcher 3
+                    </h3>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- ============ SEÇÃO 3: NOTÍCIAS ============ -->
+        <section>
+            <h2 class="text-3xl font-extrabold mb-6 text-white tracking-tight">Notícias</h2>
+            <p class="text-blue-300 text-sm">Acompanhe as últimas atualizações do mundo dos videogames.</p>
         </section>
 
     </main>
 
-    <!-- JavaScript do site -->
-    <script src="../js/script.js"></script>
-
 </body>
-
 </html>

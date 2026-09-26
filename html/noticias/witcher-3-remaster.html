@@ -8,14 +8,14 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Configuração do Tailwind CSS -->
+    <!-- Configuração do Tailwind CSS (Tema Azul) -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'roxo-profundo': '#1a0b2e',
-                        'roxo-header': '#321555',
+                        'azul-profundo': '#0a0f1d',
+                        'azul-header': '#172554',
                     }
                 }
             }
@@ -23,155 +23,156 @@
     </script>
 </head>
 
-<body class="bg-roxo-profundo text-white">
+<body class="bg-azul-profundo text-white min-h-screen flex">
 
-    <!-- ==================== HEADER ==================== -->
-    <header class="bg-roxo-header px-6 py-4">
-        <nav class="flex items-center justify-between">
+    <!-- ==================== BARRA LATERAL (SIDEBAR LEFT) ==================== -->
+    <aside class="w-64 bg-azul-header min-h-screen shrink-0 p-5 border-r border-blue-900/40 flex flex-col justify-between sticky top-0 h-screen overflow-y-auto">
+        <div>
+            <!-- Header do Menu com Logo -->
+            <div class="flex items-center justify-between mb-8 pb-4 border-b border-blue-900/60">
+                <a href="../index.html" class="text-2xl font-black text-white hover:text-blue-300 transition no-underline tracking-tight">
+                    Web News
+                </a>
+                <button class="text-blue-300 hover:text-white p-1 rounded-lg hover:bg-blue-900/50 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+            </div>
 
-            <a href="../index.html" class="text-2xl font-bold no-underline hover:text-purple-300 transition">
-                Web News
+            <!-- Links de Navegação Vertical -->
+            <nav>
+                <ul class="space-y-1 list-none m-0 p-0">
+                    <li>
+                        <a href="../index.html" class="flex items-center px-4 py-3 rounded-xl font-semibold transition text-blue-100 hover:bg-blue-900/60 hover:text-white no-underline">
+                            Início
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../reviews.html" class="flex items-center px-4 py-3 rounded-xl font-semibold transition text-blue-100 hover:bg-blue-900/60 hover:text-white no-underline">
+                            Reviews
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../videos.html" class="flex items-center px-4 py-3 rounded-xl font-semibold transition text-blue-100 hover:bg-blue-900/60 hover:text-white no-underline">
+                            Vídeos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../esports.html" class="flex items-center px-4 py-3 rounded-xl font-semibold transition text-blue-100 hover:bg-blue-900/60 hover:text-white no-underline">
+                            eSports
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../pc.html" class="flex items-center px-4 py-3 rounded-xl font-semibold transition text-blue-100 hover:bg-blue-900/60 hover:text-white no-underline">
+                            PC
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../credits.html" class="flex items-center px-4 py-3 rounded-xl font-semibold transition text-blue-100 hover:bg-blue-900/60 hover:text-white no-underline">
+                            Credits
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Campo de Busca -->
+        <div class="pt-6 border-t border-blue-900/60">
+            <div class="relative">
+                <input type="text" placeholder="Pesquisar..." 
+                    class="w-full bg-blue-950/80 border border-blue-800/80 rounded-xl px-4 py-2.5 text-xs text-white placeholder-blue-300 focus:outline-none focus:border-blue-400 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 absolute right-3 top-3 text-blue-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+            </div>
+        </div>
+    </aside>
+
+    <!-- ==================== CONTEÚDO PRINCIPAL DA MATÉRIA ==================== -->
+    <main class="flex-1 p-8 lg:p-12 overflow-y-auto max-w-4xl mx-auto">
+
+        <!-- BOTÃO VOLTAR -->
+        <div class="mb-8">
+            <a href="../index.html" class="inline-flex items-center gap-2 text-blue-300 hover:text-white transition font-semibold no-underline group">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                <span>Voltar para o Início</span>
             </a>
+        </div>
 
-            <ul class="flex items-center gap-2 list-none">
-
-                <li>
-                    <a href="../index.html"
-                        class="no-underline px-3 py-2 rounded-lg text-purple-100 hover:bg-purple-100 hover:text-purple-950 transition">
-                        🏠 Início
-                    </a>
-                </li>
-                <li>
-                    <a href="../reviews.html"
-                        class="no-underline px-3 py-2 rounded-lg text-purple-100 hover:bg-purple-100 hover:text-purple-950 transition">
-                        ⭐ Reviews
-                    </a>
-                </li>
-                <li>
-                    <a href="../videos.html"
-                        class="no-underline px-3 py-2 rounded-lg text-purple-100 hover:bg-purple-100 hover:text-purple-950 transition">
-                        🎬 Vídeos
-                    </a>
-                </li>
-                <li>
-                    <a href="../esports.html"
-                        class="no-underline px-3 py-2 rounded-lg text-purple-100 hover:bg-purple-100 hover:text-purple-950 transition">
-                        🎮 eSports
-                    </a>
-                </li>
-                <li>
-                    <a href="../pc.html"
-                        class="no-underline px-3 py-2 rounded-lg text-purple-100 hover:bg-purple-100 hover:text-purple-950 transition">
-                        💻 PC
-                    </a>
-                </li>
-                <li>
-                    <a href="../credits.html"
-                        class="no-underline px-3 py-2 rounded-lg text-purple-100 hover:bg-purple-100 hover:text-purple-950 transition">
-                        👤 Credits
-                    </a>
-                </li>
-
-            </ul>
-        </nav>
-    </header>
-
-    <!-- ==================== ARTIGO ==================== -->
-    <main class="max-w-3xl mx-auto px-6 py-12">
-
-        <!-- Categoria -->
-        <a href="../index.html" class="text-sm font-bold text-purple-400 hover:text-purple-300 transition uppercase">
+        <!-- CATEGORIA -->
+        <a href="../index.html" class="text-sm font-bold text-blue-400 hover:text-blue-300 transition uppercase tracking-wider">
             The Witcher 3: Wild Hunt - Remastered
         </a>
 
-        <!-- Título principal -->
-        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mt-3 mb-4">
-            Horários globais de lançamento da versão remasterizada de The Witcher 3: Wild Hunt são confirmados pela CD
-            Projekt
+        <!-- TÍTULO PRINCIPAL -->
+        <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mt-3 mb-4 text-white">
+            Horários globais de lançamento da versão remasterizada de The Witcher 3: Wild Hunt são confirmados
         </h1>
 
-        <!-- Subtítulo -->
-        <p class="text-xl text-purple-200 leading-snug mb-6">
-            The Witcher 3: Wild Hunt Remastered será lançado para PC, PlayStation 5, Xbox Series X|S e Nintendo Switch 2
+        <!-- SUBTÍTULO -->
+        <p class="text-lg md:text-xl text-blue-200 leading-snug mb-6">
+            A nova versão traz gráficos reformulados, ajustes de combate, transmog e atualização gratuita para quem já possui o jogo original.
         </p>
 
-        <!-- Info do autor e data -->
-        <div class="flex flex-wrap items-center gap-4 pb-6 border-b border-purple-800 text-sm">
+        <!-- INFO AUTORES -->
+        <div class="flex items-center gap-4 pb-6 border-b border-blue-900/60 text-sm">
             <div>
                 <span class="font-bold">Por </span>
-                <span class="text-purple-300">Wesley Yin-Poole, Allana Aristides</span>
+                <span class="text-blue-300">Wesley Yin-Poole, Allana Aristides</span>
             </div>
         </div>
 
-
-        <!-- Corpo do texto -->
-        <article class="space-y-5 text-lg leading-relaxed text-purple-50">
+        <!-- CORPO DO ARTIGO COMPLETO -->
+        <article class="space-y-6 text-base md:text-lg leading-relaxed text-blue-50 mt-8">
 
             <p>
-                A CD Projekt confirmou os horários de lançamento mundial de <a
-                    class="text-purple-300 hover:text-purple-100 underline transition">The Witcher 3: Wild Hunt
-                    Remastered</a>.
+                A CD Projekt RED confirmou oficialmente os horários exatos para o lançamento global da altamente antecipada versão remasterizada de <strong>The Witcher 3: Wild Hunt</strong>. A atualização estará disponível para jogadores de PC, PlayStation 5, Xbox Series X|S e Nintendo Switch 2.
             </p>
 
             <p>
-                Conforme detalhado em uma publicação nas redes sociais
-                The Witcher 3: Wild Hunt Remastered será lançado no dia 29 de setembro às 12h na Polônia, onde a CD
-                Projekt está sediada. Todos os outros horários de lançamento ao redor do mundo estão alinhados com esse
-                horário CET.
+                Para quem reside no Brasil, o acesso ao título será liberado pontualmente às <strong>07:00 (Horário de Brasília)</strong>. A desenvolvedora reforçou que a atualização será totalmente gratuita para todos os jogadores que já possuem a edição original do jogo em suas contas de qualquer plataforma suportada.
             </p>
 
-            <!-- Imagem -->
             <figure class="my-8">
                 <img src="https://i.pinimg.com/1200x/24/54/e4/2454e45b67b657e152d924a99c032d25.jpg"
-                    alt="The Witcher 3: Wild Hunt Remastered" class="w-full rounded-xl">
-                <figcaption class="text-sm text-purple-400 mt-2">
-                    The Witcher 3: Wild Hunt Remastered — Screenshots
+                    alt="The Witcher 3 Remastered" class="w-full rounded-2xl border border-blue-900/40 shadow-xl">
+                <figcaption class="text-xs text-blue-400 mt-2">
+                    The Witcher 3: Wild Hunt Remastered — CD Projekt RED
+                </figcaption>
+            </figure>
+
+            <h2 class="text-2xl md:text-3xl font-bold mt-10 mb-3 text-white border-b border-blue-900/50 pb-2">
+                O que há de novo na versão remasterizada?
+            </h2>
+
+            <p>
+                O remaster não se limita apenas a melhorias visuais. A CD Projekt RED reescreveu trechos do código de combate para tornar o manuseio de espadas e os Sinais de Bruxo mais fluidos e responsivos. Além disso, o jogo conta com:
+            </p>
+
+            <ul class="list-disc pl-6 space-y-2 text-blue-100">
+                <li><strong>Modo Ray Tracing Avançado:</strong> Iluminação global e reflexos em tempo real otimizados em todas as plataformas de nova geração.</li>
+                <li><strong>Sistema de Transmogrificação:</strong> Altere a aparência das suas armaduras sem perder os atributos dos seus equipamentos de Bruxo.</li>
+                <li><strong>Câmera de Combate Dinâmica:</strong> Uma nova opção de perspectiva sobre os ombros, proporcionando uma imersão muito mais próxima do combate.</li>
+                <li><strong>Revisão da Árvore de Habilidades:</strong> Balanceamento total de mutagênicos e poções alquímicas.</li>
+                <li><strong>Cross-Progression Total:</strong> Salve seu progresso na nuvem e continue jogando entre o PC, consoles e o novo Nintendo Switch 2.</li>
+            </ul>
+
+            <figure class="my-8">
+                <img src="https://i.pinimg.com/736x/28/66/b4/2866b46869a99deb4f09ca23ca39d948.jpg"
+                    alt="Geralt de Rivia" class="w-full rounded-2xl border border-blue-900/40 shadow-xl">
+                <figcaption class="text-xs text-blue-400 mt-2">
+                    Geralt em Novigrad com a nova iluminação Ray Tracing.
                 </figcaption>
             </figure>
 
             <p>
-                The Witcher 3: Wild Hunt Remastered será lançado para PC, PlayStation 5, Xbox Series X|S e Nintendo
-                Switch 2, mas também será uma atualização gratuita para quem já possui o jogo original. A versão
-                remasterizada também será vendida para PC pela Battle.net pela primeira vez. Há pré-venda para o Switch
-                2 e o Battle.net (essas são as únicas novas versões do jogo, já que The Witcher 3 não existia
-                anteriormente nessas duas plataformas). GOG, Steam, Epic, Xbox e PlayStation receberão a remasterização
-                como uma atualização, portanto não há pré-carregamento nessas plataformas.
-            </p>
-
-            <p>
-                Espere uma série de atualizações e melhorias nos gráficos, no desempenho, na gameplay e muito mais.
-                Haverá combate aprimorado, deslocamento e movimentos melhorados, novos efeitos para os sinais do bruxo,
-                manuseio das montarias reformulado, comportamentos dos monstros aprimorados, uma reformulação da árvore
-                de habilidades, transmogrificação, modo foto ampliado e novos golpes finais. O lançamento antecede a
-                chegada de Songs of the Past, a terceira expansão de The Witcher 3, prevista para 2027.
+                O pré-download já pode ser realizado nas lojas digitais do PlayStation, Xbox e Steam. Os proprietários da versão completa terão as expansões <em>Hearts of Stone</em> e <em>Blood and Wine</em> automaticamente atualizadas com os novos recursos gráficos e de jogabilidade.
             </p>
 
         </article>
-
-        <!-- Lista de horários -->
-        <section class="mt-10">
-            <h2 class="text-2xl font-bold mb-4">
-                The Witcher 3: Wild Hunt – Horários globais de lançamento da versão remasterizada:
-            </h2>
-
-            <ul class="space-y-2 text-lg text-purple-50">
-                <li><span class="font-bold text-purple-300">Los Angeles:</span> 3h PDT</li>
-                <li><span class="font-bold text-purple-300">Cidade do México:</span> 4h CST</li>
-                <li><span class="font-bold text-purple-300">Bogotá:</span> 5h COT</li>
-                <li><span class="font-bold text-purple-300">Nova York:</span> 6h EDT</li>
-                <li><span class="font-bold text-purple-300">Brasília:</span> 7h BRT</li>
-                <li><span class="font-bold text-purple-300">Acra:</span> 10h GMT</li>
-                <li><span class="font-bold text-purple-300">Londres:</span> 11h BST</li>
-                <li><span class="font-bold text-purple-300">Varsóvia:</span> 12h CEST</li>
-                <li><span class="font-bold text-purple-300">Cidade do Cabo:</span> 12h SAST</li>
-                <li><span class="font-bold text-purple-300">Kiev:</span> 13h EEST</li>
-                <li><span class="font-bold text-purple-300">Pequim:</span> 18h CST</li>
-                <li><span class="font-bold text-purple-300">Seul:</span> 19h KST</li>
-                <li><span class="font-bold text-purple-300">Tóquio:</span> 19h JST</li>
-                <li><span class="font-bold text-purple-300">Melbourne:</span> 20h AEST</li>
-                <li><span class="font-bold text-purple-300">Auckland:</span> 23h NZDT</li>
-            </ul>
-        </section>
 
     </main>
 

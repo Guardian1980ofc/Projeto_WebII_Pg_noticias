@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web News - E sports</title>
+    <title>eSports - Web News</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Configuração do Tailwind CSS -->
+    <!-- Configuração do Tailwind CSS (Tema Azul) -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'roxo-profundo': '#1a0b2e',
-                        'roxo-header': '#321555',
+                        'azul-profundo': '#0a0f1d',
+                        'azul-header': '#172554',
                     }
                 }
             }
@@ -23,61 +23,211 @@
     </script>
 </head>
 
-<body class="bg-roxo-profundo text-white">
+<body class="bg-azul-profundo text-white min-h-screen flex">
 
-    <header class="bg-roxo-header px-6 py-4">
-        <nav class="flex items-center justify-between">
+    <!-- ==================== BARRA LATERAL (SIDEBAR LEFT) ==================== -->
+    <aside class="w-64 bg-azul-header min-h-screen shrink-0 p-5 border-r border-blue-900/40 flex flex-col justify-between sticky top-0 h-screen overflow-y-auto">
+        <div>
+            <!-- Header do Menu com Logo -->
+            <div class="flex items-center justify-between mb-8 pb-4 border-b border-blue-900/60">
+                <a href="index.html" class="text-2xl font-black text-white hover:text-blue-300 transition no-underline tracking-tight">
+                    Web News
+                </a>
+                <button class="text-blue-300 hover:text-white p-1 rounded-lg hover:bg-blue-900/50 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+            </div>
 
-            <a href="index.html" class="text-2xl font-bold no-underline hover:text-purple-300 transition">
-                Web News
-            </a>
+            <!-- Links de Navegação Vertical -->
+            <nav>
+                <ul class="space-y-1 list-none m-0 p-0">
+                    <li>
+                        <a href="index.html" class="flex items-center px-4 py-3 rounded-xl font-semibold transition text-blue-100 hover:bg-blue-900/60 hover:text-white no-underline">
+                            Início
+                        </a>
+                    </li>
+                    <li>
+                        <a href="reviews.html" class="flex items-center px-4 py-3 rounded-xl font-semibold transition text-blue-100 hover:bg-blue-900/60 hover:text-white no-underline">
+                            Reviews
+                        </a>
+                    </li>
+                    <li>
+                        <a href="videos.html" class="flex items-center px-4 py-3 rounded-xl font-semibold transition text-blue-100 hover:bg-blue-900/60 hover:text-white no-underline">
+                            Vídeos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="esports.html" class="flex items-center px-4 py-3 rounded-xl font-bold transition bg-blue-100 text-blue-950 no-underline">
+                            eSports
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pc.html" class="flex items-center px-4 py-3 rounded-xl font-semibold transition text-blue-100 hover:bg-blue-900/60 hover:text-white no-underline">
+                            PC
+                        </a>
+                    </li>
+                    <li>
+                        <a href="credits.html" class="flex items-center px-4 py-3 rounded-xl font-semibold transition text-blue-100 hover:bg-blue-900/60 hover:text-white no-underline">
+                            Credits
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
 
-            <ul class="flex items-center gap-2 list-none">
+        <!-- Campo de Busca na Parte Inferior do Menu -->
+        <div class="pt-6 border-t border-blue-900/60">
+            <div class="relative">
+                <input type="text" placeholder="Pesquisar eSports..." 
+                    class="w-full bg-blue-950/80 border border-blue-800/80 rounded-xl px-4 py-2.5 text-xs text-white placeholder-blue-300 focus:outline-none focus:border-blue-400 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 absolute right-3 top-3 text-blue-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+            </div>
+        </div>
+    </aside>
 
-                <li>
-                    <a href="index.html"
-                        class="no-underline px-3 py-2 rounded-lg text-purple-100 hover:bg-purple-100 hover:text-purple-950 transition">
-                        🏠 Início
-                    </a>
-                </li>
+    <!-- ==================== CONTEÚDO PRINCIPAL ==================== -->
+    <main class="flex-1 p-8 lg:p-10 overflow-y-auto max-w-7xl">
 
-                <li>
-                    <a href="reviews.html"
-                        class="no-underline px-3 py-2 rounded-lg text-purple-100 hover:bg-purple-100 hover:text-purple-950 transition">
-                        ⭐ Reviews
-                    </a>
-                </li>
-                <li>
-                    <a href="videos.html"
-                        class="no-underline px-3 py-2 rounded-lg text-purple-100 hover:bg-purple-100 hover:text-purple-950 transition">
-                        🎬 Vídeos
-                    </a>
-                </li>
-                <li>
-                    <a href="esports.html"
-                        class="no-underline px-3 py-2 rounded-lg bg-purple-100 text-purple-950 font-bold transition">
-                        🎮 eSports
-                    </a>
-                </li>
-                <li>
-                    <a href="pc.html"
-                        class="no-underline px-3 py-2 rounded-lg text-purple-100 hover:bg-purple-100 hover:text-purple-950 transition">
-                        💻 PC
-                    </a>
-                </li>
-                <li>
-                    <a href="credits.html"
-                        class="no-underline px-3 py-2 rounded-lg text-purple-100 hover:bg-purple-100 hover:text-purple-950 transition">
-                        👤 Credits
-                    </a>
-                </li>
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-3 text-white tracking-tight">
+            eSports & Torneios
+        </h1>
+        <p class="text-blue-200 text-base md:text-lg mb-8">
+            Acompanhe a cobertura completa dos cenários competitivos de Counter-Strike 2, Valorant, League of Legends e Rainbow Six Siege.
+        </p>
 
-            </ul>
-        </nav>
-    </header>
+        <!-- DESTAQUE ESPORTS COM IMAGEM -->
+        <article class="relative h-[440px] rounded-2xl overflow-hidden shadow-2xl mb-12 border border-blue-900/40 group">
+            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80"
+                alt="Arena de eSports - Major de CS2" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
 
-    <main>
-        <!-- conteúdo da página Início vai aqui -->
+            <div class="absolute bottom-0 left-0 right-0 p-8">
+                <span class="bg-blue-600 text-white font-bold text-xs uppercase px-3 py-1 rounded-md tracking-wider mb-3 inline-block">
+                    CS2 Major Championships
+                </span>
+                <h2 class="text-2xl md:text-4xl font-extrabold text-white leading-tight mb-2">
+                    FURIA e MIBR garantem vaga nas etapas finais do Mundial de Counter-Strike 2
+                </h2>
+                <p class="text-blue-200 text-sm md:text-base max-w-3xl">
+                    Com atuações brilhantes nos playoffs da arena lotada, as equipes brasileiras superaram os favoritos europeus e avançam rumo ao título inédito na temporada.
+                </p>
+            </div>
+        </article>
+
+        <!-- PAINEL DE AGENDA DE PARTIDAS -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-6 text-white border-b border-blue-900/60 pb-3 flex items-center justify-between">
+                <span>🎮 Agenda de Partidas ao Vivo</span>
+                <span class="text-xs text-blue-400 font-normal">Horário de Brasília (BRT)</span>
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Partida 1 -->
+                <div class="bg-azul-header rounded-xl p-4 border border-blue-900/50 flex flex-col justify-between">
+                    <div class="flex justify-between items-center text-xs text-blue-300 font-bold mb-3">
+                        <span>VCT AMERICAS</span>
+                        <span class="bg-red-600/80 text-white px-2 py-0.5 rounded text-[10px] animate-pulse">AO VIVO</span>
+                    </div>
+                    <div class="flex items-center justify-between my-2">
+                        <div class="text-center font-bold text-lg">LOUD</div>
+                        <div class="text-xs text-blue-400 font-black px-2">2 - 1</div>
+                        <div class="text-center font-bold text-lg">Sentinels</div>
+                    </div>
+                    <div class="text-center text-xs text-blue-300 mt-2 border-t border-blue-900/40 pt-2">
+                        MD3 • Mapa Decisivo: Ascent
+                    </div>
+                </div>
+
+                <!-- Partida 2 -->
+                <div class="bg-azul-header rounded-xl p-4 border border-blue-900/50 flex flex-col justify-between">
+                    <div class="flex justify-between items-center text-xs text-blue-300 font-bold mb-3">
+                        <span>CBLOL / LTA</span>
+                        <span>Hoje • 18:00</span>
+                    </div>
+                    <div class="flex items-center justify-between my-2">
+                        <div class="text-center font-bold text-lg">PAIN</div>
+                        <div class="text-xs text-blue-400 font-black px-2">VS</div>
+                        <div class="text-center font-bold text-lg">RED Canids</div>
+                    </div>
+                    <div class="text-center text-xs text-blue-300 mt-2 border-t border-blue-900/40 pt-2">
+                        Fase de Grupos • Chave Superior
+                    </div>
+                </div>
+
+                <!-- Partida 3 -->
+                <div class="bg-azul-header rounded-xl p-4 border border-blue-900/50 flex flex-col justify-between">
+                    <div class="flex justify-between items-center text-xs text-blue-300 font-bold mb-3">
+                        <span>CS2 MAJOR</span>
+                        <span>Amanhã • 14:30</span>
+                    </div>
+                    <div class="flex items-center justify-between my-2">
+                        <div class="text-center font-bold text-lg">FURIA</div>
+                        <div class="text-xs text-blue-400 font-black px-2">VS</div>
+                        <div class="text-center font-bold text-lg">NaVi</div>
+                    </div>
+                    <div class="text-center text-xs text-blue-300 mt-2 border-t border-blue-900/40 pt-2">
+                        Quartas de Final • MD3
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEED DE NOTÍCIAS COM IMAGENS ILUSTRATIVAS -->
+        <section class="space-y-6">
+            <h2 class="text-2xl font-bold mb-6 text-white border-b border-blue-900/60 pb-3">Últimas do Cenário</h2>
+
+            <!-- Matéria 1 -->
+            <article class="flex flex-col sm:flex-row gap-6 bg-azul-header rounded-2xl p-5 border border-blue-900/50 hover:bg-blue-900/40 transition group">
+                <div class="w-full sm:w-64 h-44 flex-shrink-0 rounded-xl overflow-hidden border border-blue-900/40">
+                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80" alt="Valorant Champions VCT" 
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="flex-1 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-bold text-blue-400 uppercase tracking-wider block mb-1">VALORANT</span>
+                        <h3 class="text-xl font-bold text-white group-hover:text-blue-300 transition mb-2">
+                            Riot Games anuncia reformulação no circuito VCT e novo formato de classificação para o Champions
+                        </h3>
+                        <p class="text-blue-200 text-sm leading-relaxed mb-3">
+                            As mudanças entram em vigor a partir da próxima etapa e visam dar mais peso aos torneios regionais da América Latina e do Brasil.
+                        </p>
+                    </div>
+                    <div class="text-xs text-blue-300 font-semibold flex items-center justify-between border-t border-blue-900/40 pt-3">
+                        <span>👤 REDAÇÃO ESPORTS</span>
+                        <span>⏱️ Há 2 horas</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Matéria 2 -->
+            <article class="flex flex-col sm:flex-row gap-6 bg-azul-header rounded-2xl p-5 border border-blue-900/50 hover:bg-blue-900/40 transition group">
+                <div class="w-full sm:w-64 h-44 flex-shrink-0 rounded-xl overflow-hidden border border-blue-900/40">
+                    <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=800&q=80" alt="League of Legends Worlds" 
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="flex-1 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-bold text-blue-400 uppercase tracking-wider block mb-1">LEAGUE OF LEGENDS</span>
+                        <h3 class="text-xl font-bold text-white group-hover:text-blue-300 transition mb-2">
+                            Faker renova contrato por mais dois anos e busca o sexto título mundial de LoL com a T1
+                        </h3>
+                        <p class="text-blue-200 text-sm leading-relaxed mb-3">
+                            A estrela sul-coreana permanece no comando da equipe após uma temporada histórica e reafirma o desejo de continuar competindo no mais alto nível.
+                        </p>
+                    </div>
+                    <div class="text-xs text-blue-300 font-semibold flex items-center justify-between border-t border-blue-900/40 pt-3">
+                        <span>👤 ALEXANDRE MOREIRA</span>
+                        <span>⏱️ Há 5 horas</span>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
     </main>
 
 </body>

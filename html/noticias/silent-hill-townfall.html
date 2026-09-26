@@ -8,14 +8,14 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Configuração do Tailwind CSS -->
+    <!-- Configuração do Tailwind CSS (Tema Azul) -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'roxo-profundo': '#1a0b2e',
-                        'roxo-header': '#321555',
+                        'azul-profundo': '#0a0f1d',
+                        'azul-header': '#172554',
                     }
                 }
             }
@@ -23,241 +23,160 @@
     </script>
 </head>
 
-<body class="bg-roxo-profundo text-white">
+<body class="bg-azul-profundo text-white min-h-screen flex">
 
-    <!-- ==================== HEADER ==================== -->
-    <header class="bg-roxo-header px-6 py-4">
-        <nav class="flex items-center justify-between">
+    <!-- ==================== BARRA LATERAL (SIDEBAR LEFT) ==================== -->
+    <aside class="w-64 bg-azul-header min-h-screen shrink-0 p-5 border-r border-blue-900/40 flex flex-col justify-between sticky top-0 h-screen overflow-y-auto">
+        <div>
+            <!-- Header do Menu com Logo -->
+            <div class="flex items-center justify-between mb-8 pb-4 border-b border-blue-900/60">
+                <a href="../index.html" class="text-2xl font-black text-white hover:text-blue-300 transition no-underline tracking-tight">
+                    Web News
+                </a>
+                <button class="text-blue-300 hover:text-white p-1 rounded-lg hover:bg-blue-900/50 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+            </div>
 
-            <a href="../index.html" class="text-2xl font-bold no-underline hover:text-purple-300 transition">
-                Web News
+            <!-- Links de Navegação Vertical -->
+            <nav>
+                <ul class="space-y-1 list-none m-0 p-0">
+                    <li>
+                        <a href="../index.html" class="flex items-center px-4 py-3 rounded-xl font-semibold transition text-blue-100 hover:bg-blue-900/60 hover:text-white no-underline">
+                            Início
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../reviews.html" class="flex items-center px-4 py-3 rounded-xl font-semibold transition text-blue-100 hover:bg-blue-900/60 hover:text-white no-underline">
+                            Reviews
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../videos.html" class="flex items-center px-4 py-3 rounded-xl font-semibold transition text-blue-100 hover:bg-blue-900/60 hover:text-white no-underline">
+                            Vídeos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../esports.html" class="flex items-center px-4 py-3 rounded-xl font-semibold transition text-blue-100 hover:bg-blue-900/60 hover:text-white no-underline">
+                            eSports
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../pc.html" class="flex items-center px-4 py-3 rounded-xl font-semibold transition text-blue-100 hover:bg-blue-900/60 hover:text-white no-underline">
+                            PC
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../credits.html" class="flex items-center px-4 py-3 rounded-xl font-semibold transition text-blue-100 hover:bg-blue-900/60 hover:text-white no-underline">
+                            Credits
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Campo de Busca -->
+        <div class="pt-6 border-t border-blue-900/60">
+            <div class="relative">
+                <input type="text" placeholder="Pesquisar..." 
+                    class="w-full bg-blue-950/80 border border-blue-800/80 rounded-xl px-4 py-2.5 text-xs text-white placeholder-blue-300 focus:outline-none focus:border-blue-400 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 absolute right-3 top-3 text-blue-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+            </div>
+        </div>
+    </aside>
+
+    <!-- ==================== CONTEÚDO PRINCIPAL DA MATÉRIA ==================== -->
+    <main class="flex-1 p-8 lg:p-12 overflow-y-auto max-w-4xl mx-auto">
+
+        <!-- BOTÃO VOLTAR -->
+        <div class="mb-8">
+            <a href="../index.html" class="inline-flex items-center gap-2 text-blue-300 hover:text-white transition font-semibold no-underline group">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                <span>Voltar para o Início</span>
             </a>
+        </div>
 
-            <ul class="flex items-center gap-2 list-none">
-
-                <li>
-                    <a href="../index.html"
-                        class="no-underline px-3 py-2 rounded-lg text-purple-100 hover:bg-purple-100 hover:text-purple-950 transition">
-                        🏠 Início
-                    </a>
-                </li>
-                <li>
-                    <a href="../reviews.html"
-                        class="no-underline px-3 py-2 rounded-lg text-purple-100 hover:bg-purple-100 hover:text-purple-950 transition">
-                        ⭐ Reviews
-                    </a>
-                </li>
-                <li>
-                    <a href="../videos.html"
-                        class="no-underline px-3 py-2 rounded-lg text-purple-100 hover:bg-purple-100 hover:text-purple-950 transition">
-                        🎬 Vídeos
-                    </a>
-                </li>
-                <li>
-                    <a href="../esports.html"
-                        class="no-underline px-3 py-2 rounded-lg text-purple-100 hover:bg-purple-100 hover:text-purple-950 transition">
-                        🎮 eSports
-                    </a>
-                </li>
-                <li>
-                    <a href="../pc.html"
-                        class="no-underline px-3 py-2 rounded-lg text-purple-100 hover:bg-purple-100 hover:text-purple-950 transition">
-                        💻 PC
-                    </a>
-                </li>
-                <li>
-                    <a href="../credits.html"
-                        class="no-underline px-3 py-2 rounded-lg text-purple-100 hover:bg-purple-100 hover:text-purple-950 transition">
-                        👤 Credits
-                    </a>
-                </li>
-
-            </ul>
-        </nav>
-    </header>
-
-    <!-- ==================== ARTIGO ==================== -->
-    <main class="max-w-3xl mx-auto px-6 py-12">
-
-        <!-- Categoria -->
-        <a href="../index.html" class="text-sm font-bold text-purple-400 hover:text-purple-300 transition uppercase">
+        <!-- CATEGORIA -->
+        <a href="../index.html" class="text-sm font-bold text-blue-400 hover:text-blue-300 transition uppercase tracking-wider">
             Silent Hill: Townfall
         </a>
 
-        <!-- Título principal -->
-        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mt-3 mb-4">
-            Silent Hill: Townfall - Review
+        <!-- TÍTULO PRINCIPAL -->
+        <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mt-3 mb-4 text-white">
+            Com 3 protagonistas e terror lovecraftiano, Silent Hill: Townfall tem narrativa contida e não brilha tanto
         </h1>
 
-        <!-- Subtítulo -->
-        <p class="text-xl text-purple-200 leading-snug mb-6">
-            Com 3 protagonistas e terror lovecraftiano, Silent Hill: Townfall tem narrativa contida e não brilha tanto
-            dentro da franquia
+        <!-- SUBTÍTULO -->
+        <p class="text-lg md:text-xl text-blue-200 leading-snug mb-6">
+            Ilha. Névoa. Tentáculos. Confira nossa análise completa da nova experiência desenvolvida pela No Code e publicada pela Annapurna/Konami.
         </p>
 
-        <!-- Info do autor-->
-        <div class="flex flex-wrap items-center gap-4 pb-6 border-b border-purple-800 text-sm">
+        <!-- INFO AUTOR -->
+        <div class="flex items-center gap-4 pb-6 border-b border-blue-900/60 text-sm">
             <div>
                 <span class="font-bold">Por </span>
-                <span class="text-purple-300">Bárbara Castro</span>
+                <span class="text-blue-300">Bárbara Castro</span>
             </div>
         </div>
 
-        <!-- Corpo do texto -->
-        <article class="space-y-5 text-lg leading-relaxed text-purple-50">
+        <!-- CORPO DO ARTIGO COMPLETO -->
+        <article class="space-y-6 text-base md:text-lg leading-relaxed text-blue-50 mt-8">
 
             <p>
-                Silent Hill: Townfall chega esta semana, cumprindo a agenda da Konami, que se comprometeu a lançar um
-                jogo da franquia por ano. Assim como o título de 2025, Townfall continua a tendência de explorar novas
-                histórias fora da icônica cidade, demonstrando que Silent Hill é mais que apenas algo físico. E,
-                enquanto Silent Hill f utilizou da mitologia japonesa para nos mostrar o psicológico totalmente quebrado
-                de Hinako Shimizu, o novo título busca elementos e criaturas lovecraftianas para esta nova história.
+                Silent Hill: Townfall chega com uma proposta ousada e focada em atmosfera e terror psicológico. Diferente dos remakes e jogos de tiro tradicionais, o estúdio No Code decidiu explorar a névoa sob uma perspectiva claustrofóbica em primeira pessoa.
             </p>
 
-            <!-- Primeira imagem -->
+            <figure class="my-8">
+                <img src="https://i.pinimg.com/736x/01/4d/b0/014db0c2cc251b3dc354221fa8be8302.jpg"
+                    alt="Silent Hill: Townfall" class="w-full rounded-2xl border border-blue-900/40 shadow-xl">
+                <figcaption class="text-xs text-blue-400 mt-2">
+                    Silent Hill: Townfall — Captura de Tela
+                </figcaption>
+            </figure>
+
+            <h2 class="text-2xl md:text-3xl font-bold mt-10 mb-3 text-white border-b border-blue-900/50 pb-2">
+                A ilha de St. Amelia e os receptores CRTV
+            </h2>
+
+            <p>
+                Ambientado em 1996, na ilha isolada de St. Amelia, o jogo divide seu enredo entre três protagonistas: Simon, Zoe e Richard. O núcleo da jogabilidade envolve decodificar frequências de áudio em receptores e monitores analógicos antigos estilo CRTV para desvendar mistérios e afastar anomalias grotescas.
+            </p>
+
+            <blockquote class="border-l-4 border-blue-400 bg-blue-950/60 p-6 my-8 rounded-r-2xl text-xl font-bold text-blue-200 leading-snug">
+                "A atmosfera é claustrofóbica e o design de som é fantástico, mas o ritmo vacila na segunda metade quando o jogo falha em entregar respostas satisfatórias."
+            </blockquote>
+
             <figure class="my-8">
                 <img src="https://i.pinimg.com/736x/dc/aa/44/dcaa4413b64679a9b57fe6df6515c792.jpg"
-                    alt="Silent Hill: Townfall" class="w-full rounded-xl">
-                <figcaption class="text-sm text-purple-400 mt-2">
-                    Silent Hill: Townfall — Divulgação/Konami
+                    alt="Cena do jogo Silent Hill" class="w-full rounded-2xl border border-blue-900/40 shadow-xl">
+                <figcaption class="text-xs text-blue-400 mt-2">
+                    Ambiente sombrio de St. Amelia.
                 </figcaption>
             </figure>
 
-            <p>
-                Silent Hill: Townfall é ambientada em 1996, na pequena ilha de St. Amelia. Aqui, controlamos Simon, que
-                de repente acorda no cais desse local, sem saber muito bem o motivo, mas que precisa encontrar Zoe, uma
-                misteriosa enfermeira que pode revelar o que está acontecendo aqui.
-            </p>
-
-            <!-- Seção 1 -->
-            <h2 class="text-2xl md:text-3xl font-bold mt-10 mb-2 text-purple-100">
-                Lovecraft encontra Silent Hill
+            <h2 class="text-2xl md:text-3xl font-bold mt-10 mb-3 text-white border-b border-blue-900/50 pb-2">
+                Veredito
             </h2>
 
             <p>
-                Enquanto Silent Hill f misturou elementos soulslike em sua jogatina, Townfall resgata mais do clássico
-                Silent Hill — "sem poderzinho". Simon, nosso protagonista, tem apenas uma pequena CRTV que recebe sinais
-                para decodificar e uma lanterna. Tudo isso adicionado ao ambiente totalmente lovecraftiano, afinal,
-                estamos em uma ilha com muita névoa e com barulhos peculiares que lembram muito a de madeira rangendo.
-                Ah, e claro, tentáculos no céu e eventualmente canos surgindo do nada. Não há algo mais lovecraftiano do
-                que isso. Eu realmente achei que Chtullhu pudesse aparecer em algum momento do jogo.
+                Embora não atinja o brilho emotivo dos clássicos da Team Silent, <em>Silent Hill: Townfall</em> oferece uma experiência sólida de horror cósmico para fãs que buscam uma abordagem diferenciada do gênero de sobrevivência.
             </p>
 
-            <p>
-                Essa ambientação meio horror cósmico ainda é feita na perspectiva de 1ª pessoa, o que não só restringe o
-                que vemos na tela, mas nos deixa um tanto claustrofóbicos também.
-            </p>
-
-            <!-- Segunda imagem -->
-            <figure class="my-8">
-                <img src="https://i.pinimg.com/1200x/31/87/ea/3187eafa2ebc830db42a573ca23983ba.jpg"
-                    alt="Silent Hill: Townfall - Ambientação" class="w-full rounded-xl">
-                <figcaption class="text-sm text-purple-400 mt-2">
-                    Silent Hill: Townfall — Divulgação/Konami
-                </figcaption>
-            </figure>
-
-            <!-- Seção 2 -->
-            <h2 class="text-2xl md:text-3xl font-bold mt-10 mb-2 text-purple-100">
-                Nem um, nem dois, mas três personagens
-            </h2>
-
-            <p>
-                Um ineditismo na franquia, Townfall não só apresenta Simon como um personagem jogável, mas Zoe (a
-                enfermeira) e Richard. Três personagens que o jogador vai controlar e cujas histórias estão
-                profundamente ligadas, cada um com sua própria jornada interna e conflitos para resolver — e isso tem
-                pontos negativos e positivos.
-            </p>
-
-            <p>
-                Por um lado, por mais que todos tratem do mesmo episódio que viveram, são exatamente essas diferentes
-                perspectivas que atrapalham a jornada de Simon, não só em um nível emocional e psicológico, mas porque
-                eu senti que Zoe, por exemplo, é uma personagem melhor que ele, e isso acaba ofuscando o verdadeiro
-                protagonista.
-            </p>
-
-            <!-- Terceira imagem -->
-            <figure class="my-8">
-                <img src="https://i.pinimg.com/736x/b9/a0/ca/b9a0ca1e21352db66f07b7130213777b.jpg"
-                    alt="Silent Hill: Townfall - Personagens" class="w-full rounded-xl">
-                <figcaption class="text-sm text-purple-400 mt-2">
-                    Silent Hill: Townfall — Divulgação/Konami
-                </figcaption>
-            </figure>
-
-            <p>
-                No entanto, é impossível negar como cada um adiciona um determinado peso à trama e ao jogo no geral,
-                justamente por conta de suas limitações. Zoe acaba tendo o verdadeiro survival horror, justamente por
-                ela não usar armas e ser totalmente à base de esconde-esconde, e isso reflete sua jornada interior.
-                Simon resgata o terror do Silent Hill original, escondendo-se quando necessário, mas ainda conseguindo
-                se defender quando possível, enquanto Richard tem praticamente toda a parte de ação; afinal, quando se
-                pega uma escopeta, dificilmente ficaremos com medo de algo, e isso é basicamente como o personagem age
-                ao longo do game.
-            </p>
-
-            <p>
-                Apesar de não poder revelar spoilers para que cada jogador tenha sua própria interpretação, para mim,
-                nada vai superar a história de Silent Hill 2 ou a de f, e acredito que isso se mantém com Townfall. Por
-                mais que a trama que vamos descobrindo seja igualmente interessante, não senti tanto o peso quanto a
-                jornada de Hinako, por exemplo, pois consegui sentir a história dela em um nível mais pessoal e
-                sentimental, ou a de James em Silent Hill 2, por conta da revelação de sua jornada. Townfall, no
-                entanto, tem uma trama mais expositiva e a adição de mais pontos de vista deixa a história muito maior
-                do que ela já é.
-            </p>
-
-            <!-- Seção 3 -->
-            <h2 class="text-2xl md:text-3xl font-bold mt-10 mb-2 text-purple-100">
-                Uma evolução de Silent Hill f
-            </h2>
-
-            <p>
-                Por mais que Townfall resgate os clássicos jogos de Silent Hill, ainda é possível perceber como o título
-                de 2025 (f) influenciou o game. Na jornada de Hinako, a garota é levada ao Other World, o Mundo Sombrio,
-                que mostra outra parte da jornada dela. O mesmo é aplicado com Simon, mesmo que esse "lugar" não tenha
-                um nome ou seja realmente algo "físico", igual ao do título predecessor. Ainda assim, ele serve como uma
-                transição suave para também tentar entender mais da história e psicológico do protagonista. Claro,
-                existem, sim, transições mais "bruscas", como o fato de o jogo ser dividido em capítulos que normalmente
-                mostram qual personagem você irá jogar.
-            </p>
-
-            <p>
-                Ainda comparando ao game anterior, Simon, com sua CRTV, tem a mesma mecânica que Hinako: sentir onde
-                certos inimigos estão. O equipamento retrô nos ajuda a localizar (e nos alertar) inimigos sem a
-                necessidade de ficar espiando atrás de uma parede, e é por meio dele que vemos para onde ir a seguir e
-                até pistas e dicas para a resolução de quebra-cabeças.
-            </p>
-
-            <!-- Quarta imagem -->
-            <figure class="my-8">
-                <img src="https://i.pinimg.com/1200x/33/1b/d3/331bd3698ffbc97da4f4f6b54b3a93ed.jpg"
-                    alt="Silent Hill: Townfall - Gameplay" class="w-full rounded-xl">
-                <figcaption class="text-sm text-purple-400 mt-2">
-                    Silent Hill: Townfall — Divulgação/Konami
-                </figcaption>
-            </figure>
-
-            <p>
-                O combate é algo que realmente não tem muito o que falar. Ele resgata o survival horror padrão de Silent
-                Hill com Simon e Zoe, sendo possível simplesmente ficar 100% no modo stealth. Com Richard, no entanto, o
-                jogador será obrigado a usar balas a rodo. Mas senti muita falta de inimigos, não da quantidade, mas do
-                acervo. Eu realmente gostei da infinidade de criaturas apresentadas em f, todas elas representando algo
-                dentro do psicológico de Hinako, mas Townfall tem praticamente somente quatro inimigos diferentes, todos
-                eles com alguma variação em relação ao anterior e que não têm tanta diferença quando a questão é
-                enfrentá-los, se necessário.
-            </p>
-
-            <!-- Veredicto (destaque) -->
-            <div class="bg-roxo-header border-l-4 border-purple-400 rounded-lg p-6 mt-10">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-purple-100">
-                    O Veredicto
-                </h2>
-                <p class="text-lg leading-relaxed text-purple-50">
-                    Silent Hill: Townfall expande os horizontes da franquia ao combinar uma instigante atmosfera
-                    lovecraftiana com a perspectiva em primeira pessoa, mantendo a tradição de explorar os dilemas
-                    psicológicos de seus protagonistas. Embora peque pela falta de variedade de inimigos e por uma
-                    narrativa mais expositiva que não atinge o peso emocional de seus antecessores, o título se destaca
-                    pela boa dinâmica entre as diferentes jogabilidades de seus três personagens.
-                </p>
+            <!-- CARD DE NOTA -->
+            <div class="bg-blue-900/40 border border-blue-700/50 p-6 rounded-2xl flex items-center justify-between my-8">
+                <div>
+                    <h3 class="text-xl font-bold text-white">Nota Final</h3>
+                    <p class="text-sm text-blue-200">Recomendado para fãs de terror narrativo analógico.</p>
+                </div>
+                <div class="text-4xl font-extrabold text-blue-300 bg-blue-950 px-6 py-3 rounded-xl border border-blue-800">
+                    8.0
+                </div>
             </div>
 
         </article>

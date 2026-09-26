@@ -8,14 +8,14 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Configuração do Tailwind CSS -->
+    <!-- Configuração do Tailwind CSS (Tema Azul) -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'roxo-profundo': '#1a0b2e',
-                        'roxo-header': '#321555',
+                        'azul-profundo': '#0a0f1d',
+                        'azul-header': '#172554',
                     }
                 }
             }
@@ -23,205 +23,203 @@
     </script>
 </head>
 
-<body class="bg-roxo-profundo text-white">
+<body class="bg-azul-profundo text-white min-h-screen flex">
 
-    <!-- ==================== HEADER ==================== -->
-    <header class="bg-roxo-header px-6 py-4">
-        <nav class="flex items-center justify-between">
+    <!-- ==================== BARRA LATERAL (SIDEBAR LEFT) ==================== -->
+    <aside class="w-64 bg-azul-header min-h-screen shrink-0 p-5 border-r border-blue-900/40 flex flex-col justify-between sticky top-0 h-screen overflow-y-auto">
+        <div>
+            <!-- Header do Menu com Logo e Botão Recolher -->
+            <div class="flex items-center justify-between mb-8 pb-4 border-b border-blue-900/60">
+                <a href="index.html" class="text-2xl font-black text-white hover:text-blue-300 transition no-underline tracking-tight">
+                    Web News
+                </a>
+                <button class="text-blue-300 hover:text-white p-1 rounded-lg hover:bg-blue-900/50 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+            </div>
 
-            <a href="index.html" class="text-2xl font-bold no-underline hover:text-purple-300 transition">
-                Web News
-            </a>
+            <!-- Links de Navegação Vertical -->
+            <nav>
+                <ul class="space-y-1 list-none m-0 p-0">
+                    <li>
+                        <a href="index.html" class="flex items-center px-4 py-3 rounded-xl font-semibold transition text-blue-100 hover:bg-blue-900/60 hover:text-white no-underline">
+                            Início
+                        </a>
+                    </li>
+                    <li>
+                        <a href="reviews.html" class="flex items-center px-4 py-3 rounded-xl font-bold transition bg-blue-100 text-blue-950 no-underline">
+                            Reviews
+                        </a>
+                    </li>
+                    <li>
+                        <a href="videos.html" class="flex items-center px-4 py-3 rounded-xl font-semibold transition text-blue-100 hover:bg-blue-900/60 hover:text-white no-underline">
+                            Vídeos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="esports.html" class="flex items-center px-4 py-3 rounded-xl font-semibold transition text-blue-100 hover:bg-blue-900/60 hover:text-white no-underline">
+                            eSports
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pc.html" class="flex items-center px-4 py-3 rounded-xl font-semibold transition text-blue-100 hover:bg-blue-900/60 hover:text-white no-underline">
+                            PC
+                        </a>
+                    </li>
+                    <li>
+                        <a href="credits.html" class="flex items-center px-4 py-3 rounded-xl font-semibold transition text-blue-100 hover:bg-blue-900/60 hover:text-white no-underline">
+                            Credits
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
 
-            <ul class="flex items-center gap-2 list-none">
+        <!-- Campo de Busca na Parte Inferior do Menu -->
+        <div class="pt-6 border-t border-blue-900/60">
+            <div class="relative">
+                <input type="text" placeholder="Pesquisar..." 
+                    class="w-full bg-blue-950/80 border border-blue-800/80 rounded-xl px-4 py-2.5 text-xs text-white placeholder-blue-300 focus:outline-none focus:border-blue-400 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 absolute right-3 top-3 text-blue-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+            </div>
+        </div>
+    </aside>
 
-                <li>
-                    <a href="index.html"
-                        class="no-underline px-3 py-2 rounded-lg text-purple-100 hover:bg-purple-100 hover:text-purple-950 transition">
-                        🏠 Início
-                    </a>
-                </li>
-                <li>
-                    <a href="reviews.html"
-                        class="no-underline px-3 py-2 rounded-lg bg-purple-100 text-purple-950 font-bold transition">
-                        ⭐ Reviews
-                    </a>
-                </li>
-                <li>
-                    <a href="videos.html"
-                        class="no-underline px-3 py-2 rounded-lg text-purple-100 hover:bg-purple-100 hover:text-purple-950 transition">
-                        🎬 Vídeos
-                    </a>
-                </li>
-                <li>
-                    <a href="esports.html"
-                        class="no-underline px-3 py-2 rounded-lg text-purple-100 hover:bg-purple-100 hover:text-purple-950 transition">
-                        🎮 eSports
-                    </a>
-                </li>
-                <li>
-                    <a href="pc.html"
-                        class="no-underline px-3 py-2 rounded-lg text-purple-100 hover:bg-purple-100 hover:text-purple-950 transition">
-                        💻 PC
-                    </a>
-                </li>
-                <li>
-                    <a href="credits.html"
-                        class="no-underline px-3 py-2 rounded-lg text-purple-100 hover:bg-purple-100 hover:text-purple-950 transition">
-                        👤 Credits
-                    </a>
-                </li>
+    <!-- ==================== CONTEÚDO PRINCIPAL ==================== -->
+    <main class="flex-1 p-8 lg:p-10 overflow-y-auto max-w-7xl">
 
-            </ul>
-        </nav>
-    </header>
-
-    <!-- ==================== MAIN ==================== -->
-    <main class="max-w-7xl mx-auto px-6 py-10">
-
-        <!-- Título da página -->
-        <h1 class="text-5xl md:text-6xl font-extrabold mb-8">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-8 text-white tracking-tight">
             Reviews
         </h1>
 
-        <!-- ============ REVIEW EM DESTAQUE ============ -->
-        <article class="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl mb-16">
-
-            <!-- Imagem de fundo -->
+        <!-- REVIEW EM DESTAQUE -->
+        <article class="relative h-[480px] rounded-2xl overflow-hidden shadow-2xl mb-12 border border-blue-900/40 group">
             <img src="https://i.pinimg.com/736x/01/4d/b0/014db0c2cc251b3dc354221fa8be8302.jpg"
-                alt="Silent Hill: Townfall" class="absolute inset-0 w-full h-full object-cover">
+                alt="Silent Hill: Townfall" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
 
-            <!-- Overlay escuro (gradiente de baixo pra cima) -->
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
 
-            <!-- Link invisível cobrindo o card -->
             <a href="noticias/silent-hill-townfall.html" class="absolute inset-0 z-10"
                 aria-label="Ler review completa de Silent Hill: Townfall"></a>
 
-            <!-- Nota da review (retângulo roxo) -->
-            <div class="absolute bottom-6 left-6 bg-purple-600 px-6 py-4 rounded-lg shadow-lg">
-                <div class="text-4xl font-bold leading-none">8</div>
-                <div class="text-xs uppercase tracking-wider mt-1 text-purple-100">Nota</div>
+            <div class="absolute bottom-6 left-6 bg-blue-600 px-6 py-4 rounded-xl shadow-lg border border-blue-400/40">
+                <div class="text-4xl font-extrabold leading-none">8.0</div>
+                <div class="text-xs uppercase tracking-wider mt-1 text-blue-100 font-semibold">Nota</div>
             </div>
-
         </article>
 
-        <!-- ============ LISTA DE REVIEWS ============ -->
+        <!-- LISTA DE REVIEWS -->
+        <h2 class="text-2xl font-bold mb-6 text-white border-b border-blue-900/60 pb-3">Todas as Reviews</h2>
+        
+        <div class="space-y-6">
 
-        <h2 class="text-3xl font-bold mb-6">Todas as Reviews</h2>
-        
-        <!-- review 3: Silent hill -->
-        <article class="flex gap-6 bg-roxo-header rounded-xl overflow-hidden hover:bg-purple-900 transition mb-6">
-        
-            <!-- Imagem com nota -->
-            <div class="relative w-64 h-36 flex-shrink-0">
-                <img src="https://i.pinimg.com/236x/80/a0/32/80a032c836e5fdf183afd962507fddc3.jpg" alt="Silent Hill: Townfall"
-                    class="w-full h-full object-cover">
-                <div class="absolute bottom-2 left-2 bg-purple-600 px-2 py-1 rounded text-sm font-bold leading-none">
-                    8
+            <!-- Review 1: Silent Hill -->
+            <article class="flex flex-col sm:flex-row gap-6 bg-azul-header rounded-2xl p-4 border border-blue-900/50 hover:bg-blue-900/50 transition group">
+                <div class="relative w-full sm:w-64 h-40 flex-shrink-0 rounded-xl overflow-hidden">
+                    <img src="https://i.pinimg.com/236x/80/a0/32/80a032c836e5fdf183afd962507fddc3.jpg" alt="Silent Hill: Townfall"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="absolute bottom-2 left-2 bg-blue-600 px-3 py-1 rounded-lg text-sm font-bold leading-none shadow">
+                        8.0
+                    </div>
                 </div>
-            </div>
-        
-            <!-- Texto -->
-            <div class="flex-1 py-4 pr-4">
-                <h3 class="text-xl font-bold mb-2 leading-snug">
-                    Com 3 protagonistas e terror lovecraftiano, Silent Hill: Townfall tem narrativa contida e não brilha tanto
-                    dentro da franquia
-                </h3>
-                <p class="text-purple-200 text-sm mb-3">
-                    Ilha. Névoa. Tentáculos.
-                </p>
-                <div class="text-xs text-purple-300 flex gap-4">
-                    <span>🏷️ SILENT HILL: TOWNFALL</span>
-                    <span>👤 BÁRBARA CASTRO</span>
+                <div class="flex-1 flex flex-col justify-between py-1">
+                    <div>
+                        <h3 class="text-lg font-bold mb-2 leading-snug group-hover:text-blue-300 transition">
+                            <a href="noticias/silent-hill-townfall.html" class="no-underline text-white hover:text-blue-300">
+                                Com 3 protagonistas e terror lovecraftiano, Silent Hill: Townfall tem narrativa contida e não brilha tanto
+                            </a>
+                        </h3>
+                        <p class="text-blue-200 text-sm mb-3">
+                            Ilha. Névoa. Tentáculos.
+                        </p>
+                    </div>
+                    <div class="text-xs text-blue-300 flex gap-4 font-semibold">
+                        <span>🏷️ SILENT HILL: TOWNFALL</span>
+                        <span>👤 BÁRBARA CASTRO</span>
+                    </div>
                 </div>
-            </div>
-        
-        </article>
+            </article>
 
-        <!-- Review 2: Wolverine -->
-        <article class="flex gap-6 bg-roxo-header rounded-xl overflow-hidden hover:bg-purple-900 transition mb-6">
-        
-            <!-- Imagem com nota -->
-            <div class="relative w-64 h-36 flex-shrink-0">
-                <img src="https://i.pinimg.com/736x/eb/45/ca/eb45ca08cd770b655276b8e2aa24721e.jpg" alt="Wolverine"
-                    class="w-full h-full object-cover">
-                <div class="absolute bottom-2 left-2 bg-purple-600 px-2 py-1 rounded text-sm font-bold leading-none">
-                    5
+            <!-- Review 2: Wolverine -->
+            <article class="flex flex-col sm:flex-row gap-6 bg-azul-header rounded-2xl p-4 border border-blue-900/50 hover:bg-blue-900/50 transition group">
+                <div class="relative w-full sm:w-64 h-40 flex-shrink-0 rounded-xl overflow-hidden">
+                    <img src="https://i.pinimg.com/736x/eb/45/ca/eb45ca08cd770b655276b8e2aa24721e.jpg" alt="Wolverine"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="absolute bottom-2 left-2 bg-blue-600 px-3 py-1 rounded-lg text-sm font-bold leading-none shadow">
+                        5.0
+                    </div>
                 </div>
-            </div>
-        
-            <!-- Texto -->
-            <div class="flex-1 py-4 pr-4">
-                <h3 class="text-xl font-bold mb-2 leading-snug">
-                    Wolverine é uma decepção: gameplay repetitivo e história rasa marcam o retorno do mutante aos games
-                </h3>
-                <p class="text-purple-200 text-sm mb-3">
-                    Garras afiadas, gameplay cego.
-                </p>
-                <div class="text-xs text-purple-300 flex gap-4">
-                    <span>🏷️ WOLVERINE</span>
-                    <span>👤 RAFAEL MENDES</span>
+                <div class="flex-1 flex flex-col justify-between py-1">
+                    <div>
+                        <h3 class="text-lg font-bold mb-2 leading-snug group-hover:text-blue-300 transition">
+                            Wolverine é uma decepção: gameplay repetitivo e história rasa marcam o retorno do mutante
+                        </h3>
+                        <p class="text-blue-200 text-sm mb-3">
+                            Garras afiadas, gameplay cego.
+                        </p>
+                    </div>
+                    <div class="text-xs text-blue-300 flex gap-4 font-semibold">
+                        <span>🏷️ WOLVERINE</span>
+                        <span>👤 RAFAEL MENDES</span>
+                    </div>
                 </div>
-            </div>
-        
-        </article>
+            </article>
 
-        <!-- Review 3: 007 First Light -->
-        <article class="flex gap-6 bg-roxo-header rounded-xl overflow-hidden hover:bg-purple-900 transition mb-6">
-        
-            <!-- Imagem com nota -->
-            <div class="relative w-64 h-36 flex-shrink-0">
-                <img src="https://i.pinimg.com/736x/bb/f2/dd/bbf2dd2c174ea7e1f67e9d3a80274cff.jpg" alt="007 First Light"
-                    class="w-full h-full object-cover object-top">
-                <div class="absolute bottom-2 left-2 bg-purple-600 px-2 py-1 rounded text-sm font-bold leading-none">
-                    9
+            <!-- Review 3: 007 First Light -->
+            <article class="flex flex-col sm:flex-row gap-6 bg-azul-header rounded-2xl p-4 border border-blue-900/50 hover:bg-blue-900/50 transition group">
+                <div class="relative w-full sm:w-64 h-40 flex-shrink-0 rounded-xl overflow-hidden">
+                    <img src="https://i.pinimg.com/736x/bb/f2/dd/bbf2dd2c174ea7e1f67e9d3a80274cff.jpg" alt="007 First Light"
+                        class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+                    <div class="absolute bottom-2 left-2 bg-blue-600 px-3 py-1 rounded-lg text-sm font-bold leading-none shadow">
+                        9.0
+                    </div>
                 </div>
-            </div>
-        
-            <!-- Texto -->
-            <div class="flex-1 py-4 pr-4">
-                <h3 class="text-xl font-bold mb-2 leading-snug">
-                    007 First Light é uma aula de espionagem e já entra na disputa pelo GOTY
-                </h3>
-                <p class="text-purple-200 text-sm mb-3">
-                    O agente secreto em sua melhor forma.
-                </p>
-                <div class="text-xs text-purple-300 flex gap-4">
-                    <span>🏷️ 007 FIRST LIGHT</span>
-                    <span>👤 ALEXANDRE</span>
+                <div class="flex-1 flex flex-col justify-between py-1">
+                    <div>
+                        <h3 class="text-lg font-bold mb-2 leading-snug group-hover:text-blue-300 transition">
+                            007 First Light é uma aula de espionagem e já entra na disputa pelo GOTY
+                        </h3>
+                        <p class="text-blue-200 text-sm mb-3">
+                            O agente secreto em sua melhor forma.
+                        </p>
+                    </div>
+                    <div class="text-xs text-blue-300 flex gap-4 font-semibold">
+                        <span>🏷️ 007 FIRST LIGHT</span>
+                        <span>👤 ALEXANDRE</span>
+                    </div>
                 </div>
-            </div>
-        
-        </article>
+            </article>
 
-        <!-- Review 4: Control Resonant -->
-        <article class="flex gap-6 bg-roxo-header rounded-xl overflow-hidden hover:bg-purple-900 transition">
-        
-            <!-- Imagem com nota -->
-            <div class="relative w-64 h-36 flex-shrink-0">
-                <img src="https://i.pinimg.com/736x/2d/57/8c/2d578c94ea2cc6771cda18360b47bd0f.jpg" alt="Control Resonant" class="w-full h-full object-cover object-top">
-                <div class="absolute bottom-2 left-2 bg-purple-600 px-2 py-1 rounded text-sm font-bold leading-none">
-                    9
+            <!-- Review 4: Control Resonant -->
+            <article class="flex flex-col sm:flex-row gap-6 bg-azul-header rounded-2xl p-4 border border-blue-900/50 hover:bg-blue-900/50 transition group">
+                <div class="relative w-full sm:w-64 h-40 flex-shrink-0 rounded-xl overflow-hidden">
+                    <img src="https://i.pinimg.com/736x/2d/57/8c/2d578c94ea2cc6771cda18360b47bd0f.jpg" alt="Control Resonant"
+                        class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
+                    <div class="absolute bottom-2 left-2 bg-blue-600 px-3 py-1 rounded-lg text-sm font-bold leading-none shadow">
+                        9.0
+                    </div>
                 </div>
-            </div>
-        
-            <!-- Texto -->
-            <div class="flex-1 py-4 pr-4">
-                <h3 class="text-xl font-bold mb-2 leading-snug">
-                    Control Resonant é mais uma prova da genialidade da Remedy e mostra que o céu é o limite para a
-                    desenvolvedora
-                </h3>
-                <p class="text-purple-200 text-sm mb-3">
-                    Mais um excelente jogo de 2026.
-                </p>
-                <div class="text-xs text-purple-300 flex gap-4">
-                    <span>🏷️ CONTROL RESONANT</span>
-                    <span>👤 VITOR CONCEIÇÃO</span>
+                <div class="flex-1 flex flex-col justify-between py-1">
+                    <div>
+                        <h3 class="text-lg font-bold mb-2 leading-snug group-hover:text-blue-300 transition">
+                            Control Resonant é mais uma prova da genialidade da Remedy e mostra a evolução do estúdio
+                        </h3>
+                        <p class="text-blue-200 text-sm mb-3">
+                            Mais um excelente jogo para 2026.
+                        </p>
+                    </div>
+                    <div class="text-xs text-blue-300 flex gap-4 font-semibold">
+                        <span>🏷️ CONTROL RESONANT</span>
+                        <span>👤 VITOR CONCEIÇÃO</span>
+                    </div>
                 </div>
-            </div>
-        
-        </article>
+            </article>
+
+        </div>
 
     </main>
 

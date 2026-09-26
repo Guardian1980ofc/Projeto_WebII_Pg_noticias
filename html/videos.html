@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web News - Vídeos</title>
+    <title>Vídeos & Trailers - Web News</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Configuração do Tailwind CSS -->
+    <!-- Configuração do Tailwind CSS (Tema Azul Profundo) -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'roxo-profundo': '#1a0b2e',
-                        'roxo-header': '#321555',
+                        'azul-profundo': '#0a0f1d',
+                        'azul-header': '#172554',
                     }
                 }
             }
@@ -23,108 +23,229 @@
     </script>
 </head>
 
-<body class="bg-roxo-profundo text-white">
+<body class="bg-azul-profundo text-white min-h-screen flex">
 
-    <header class="bg-roxo-header px-6 py-4">
-        <nav class="flex items-center justify-between">
+    <!-- ==================== BARRA LATERAL (SIDEBAR LEFT) ==================== -->
+    <aside class="w-64 bg-azul-header min-h-screen shrink-0 p-5 border-r border-blue-900/40 flex flex-col justify-between sticky top-0 h-screen overflow-y-auto">
+        <div>
+            <!-- Header do Menu com Logo -->
+            <div class="flex items-center justify-between mb-8 pb-4 border-b border-blue-900/60">
+                <a href="index.html" class="text-2xl font-black text-white hover:text-blue-300 transition no-underline tracking-tight">
+                    Web News
+                </a>
+            </div>
 
-            <a href="index.html" class="text-2xl font-bold no-underline hover:text-purple-300 transition">
-                Web News
-            </a>
+            <!-- Links de Navegação Vertical -->
+            <nav>
+                <ul class="space-y-1 list-none m-0 p-0">
+                    <li>
+                        <a href="index.html" class="flex items-center px-4 py-3 rounded-xl font-semibold transition text-blue-100 hover:bg-blue-900/60 hover:text-white no-underline">
+                            Início
+                        </a>
+                    </li>
+                    <li>
+                        <a href="reviews.html" class="flex items-center px-4 py-3 rounded-xl font-semibold transition text-blue-100 hover:bg-blue-900/60 hover:text-white no-underline">
+                            Reviews
+                        </a>
+                    </li>
+                    <li>
+                        <a href="videos.html" class="flex items-center px-4 py-3 rounded-xl font-bold transition bg-blue-100 text-blue-950 no-underline shadow-md">
+                            Vídeos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="esports.html" class="flex items-center px-4 py-3 rounded-xl font-semibold transition text-blue-100 hover:bg-blue-900/60 hover:text-white no-underline">
+                            eSports
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pc.html" class="flex items-center px-4 py-3 rounded-xl font-semibold transition text-blue-100 hover:bg-blue-900/60 hover:text-white no-underline">
+                            PC
+                        </a>
+                    </li>
+                    <li>
+                        <a href="credits.html" class="flex items-center px-4 py-3 rounded-xl font-semibold transition text-blue-100 hover:bg-blue-900/60 hover:text-white no-underline">
+                            Credits
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
 
-            <ul class="flex items-center gap-2 list-none">
+        <!-- Campo de Pesquisa -->
+        <div class="pt-6 border-t border-blue-900/60">
+            <input type="text" placeholder="Pesquisar vídeos..." 
+                class="w-full bg-blue-950/80 border border-blue-800/80 rounded-xl px-4 py-2.5 text-xs text-white placeholder-blue-300 focus:outline-none focus:border-blue-400 transition">
+        </div>
+    </aside>
 
-                <li>
-                    <a href="index.html"
-                        class="no-underline px-3 py-2 rounded-lg text-purple-100 hover:bg-purple-100 hover:text-purple-950 transition">
-                        🏠 Início
-                    </a>
-                </li>
+    <!-- ==================== CONTEÚDO PRINCIPAL ==================== -->
+    <main class="flex-1 p-6 lg:p-10 overflow-y-auto max-w-7xl">
 
-                <li>
-                    <a href="reviews.html"
-                        class="no-underline px-3 py-2 rounded-lg text-purple-100 hover:bg-purple-100 hover:text-purple-950 transition">
-                        ⭐ Reviews
-                    </a>
-                </li>
-                <li>
-                    <a href="videos.html"
-                        class="no-underline px-3 py-2 rounded-lg bg-purple-100 text-purple-950 font-bold transition">
-                        🎬 Vídeos
-                    </a>
-                </li>
-                <li>
-                    <a href="esports.html"
-                        class="no-underline px-3 py-2 rounded-lg text-purple-100 hover:bg-purple-100 hover:text-purple-950 transition">
-                        🎮 eSports
-                    </a>
-                </li>
-                <li>
-                    <a href="pc.html"
-                        class="no-underline px-3 py-2 rounded-lg text-purple-100 hover:bg-purple-100 hover:text-purple-950 transition">
-                        💻 PC
-                    </a>
-                </li>
-                <li>
-                    <a href="credits.html"
-                        class="no-underline px-3 py-2 rounded-lg text-purple-100 hover:bg-purple-100 hover:text-purple-950 transition">
-                        👤 Credits
-                    </a>
-                </li>
+        <header class="mb-8">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-3 text-white tracking-tight">
+                Vídeos & Trailers
+            </h1>
+            <p class="text-blue-200 text-base md:text-lg">
+                Assista aos novos trailers, gameplays estendidas e análises completas diretamente no portal.
+            </p>
+        </header>
 
-            </ul>
-        </nav>
-    </header>
-
-    <main class="max-w-7xl mx-auto px-6 py-10">
-    
-        <!-- Título -->
-        <h1 class="text-5xl md:text-6xl font-extrabold mb-8">Vídeos</h1>
-    
-        <!-- Vídeo em destaque -->
-        <!-- Vídeo em destaque -->
+        <!-- ============ SEÇÃO 1: VÍDEO EM DESTAQUE PRINCIPAL ============ -->
         <section class="mb-12">
-        
-            <!-- Card do vídeo clicável -->
-            <a href="https://www.youtube.com/watch?v=tJbzMqJGH4k" target="_blank" rel="noopener noreferrer"
-                class="block relative aspect-video rounded-2xl overflow-hidden shadow-2xl group">
-        
-                <!-- Thumbnail do vídeo -->
-                <img src="https://img.youtube.com/vi/tJbzMqJGH4k/maxresdefault.jpg" alt="Grand Theft Auto VI: An Extended Look"
-                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-        
-                <!-- Overlay escuro -->
-                <div class="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition"></div>
-        
-                <!-- Botão de play -->
-                <div class="absolute inset-0 flex items-center justify-center">
-                    <div
-                        class="bg-purple-600 rounded-full w-24 h-24 flex items-center justify-center shadow-2xl group-hover:scale-110 transition">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-12 h-12 ml-1">
-                            <path d="M8 5v14l11-7z" />
-                        </svg>
+            <div class="bg-azul-header rounded-2xl p-6 border border-blue-900/50 shadow-2xl">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="bg-red-600 text-white font-extrabold text-xs uppercase px-3 py-1 rounded-md tracking-wider">
+                        Destaque da Semana
+                    </span>
+                    <span class="text-xs text-blue-300 font-medium">Lançado recentemente</span>
+                </div>
+
+                <!-- Player de Vídeo Incorporado Principal -->
+                <div class="relative aspect-video w-full rounded-xl overflow-hidden shadow-2xl border border-blue-900/60 mb-4 bg-black">
+                    <iframe class="w-full h-full absolute inset-0"
+                        src="https://www.youtube.com/embed/QdBZY2fkU-0" 
+                        title="Grand Theft Auto VI Trailer 1" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div>
+                        <h2 class="text-2xl md:text-3xl font-extrabold text-white mb-2 leading-tight">
+                            Grand Theft Auto VI — Trailer Oficial de Revelação
+                        </h2>
+                        <p class="text-blue-100 text-sm leading-relaxed">
+                            A Rockstar Games apresenta o primeiro vislumbre de Vice City e da história de Lucia e Jason.
+                        </p>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=QdBZY2fkU-0" target="_blank" rel="noopener noreferrer" 
+                        class="shrink-0 bg-blue-900/80 hover:bg-blue-800 text-blue-200 hover:text-white px-4 py-2 rounded-xl text-xs font-bold transition border border-blue-700/50 text-center no-underline">
+                        Abrir no YouTube →
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ SEÇÃO 2: TRAILERS & ANÚNCIOS ============ -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-extrabold mb-6 text-white border-b border-blue-900/60 pb-3">
+                Trailers mais Esperados
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- Card de Vídeo 1: Black Myth Wukong -->
+                <div class="bg-azul-header rounded-2xl border border-blue-900/50 overflow-hidden shadow-lg p-4 flex flex-col justify-between">
+                    <div class="relative aspect-video w-full rounded-xl overflow-hidden border border-blue-900/40 mb-3 bg-black">
+                        <iframe class="w-full h-full absolute inset-0"
+                            src="https://www.youtube.com/embed/O2nNljv0MOw" 
+                            title="Black Myth Wukong Trailer" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div>
+                        <span class="text-[11px] font-bold text-blue-400 uppercase tracking-wider block mb-1">Gameplay Trailer</span>
+                        <h3 class="font-bold text-lg text-white mb-1">Black Myth: Wukong — Gameplay de Apresentação</h3>
+                        <p class="text-xs text-blue-200 mb-3">Confira o combate impressionante na Unreal Engine 5 e o confronto contra chefes lendários.</p>
+                        <a href="https://www.youtube.com/watch?v=O2nNljv0MOw" target="_blank" rel="noopener noreferrer" class="text-xs text-blue-400 hover:underline font-semibold">Assistir diretamente no YouTube →</a>
                     </div>
                 </div>
-        
-            </a>
-        
-            <!-- Título do vídeo embaixo, com tema de VICE CITY -->
-            <h2
-                class="text-2xl md:text-3xl font-bold mt-6 bg-gradient-to-r from-pink-500 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                Grand Theft Auto VI: An Extended Look
-            </h2>
-            <p class="mt-2 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Rockstar Games revela novo olhar estendido do jogo mais aguardado da década.
-            </p>
-        
+
+                <!-- Card de Vídeo 2: Elden Ring Shadow of the Erdtree -->
+                <div class="bg-azul-header rounded-2xl border border-blue-900/50 overflow-hidden shadow-lg p-4 flex flex-col justify-between">
+                    <div class="relative aspect-video w-full rounded-xl overflow-hidden border border-blue-900/40 mb-3 bg-black">
+                        <iframe class="w-full h-full absolute inset-0"
+                            src="https://www.youtube.com/embed/qLZenOn7WUo" 
+                            title="Elden Ring Shadow of the Erdtree" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div>
+                        <span class="text-[11px] font-bold text-blue-400 uppercase tracking-wider block mb-1">Expansão DLC</span>
+                        <h3 class="font-bold text-lg text-white mb-1">Elden Ring: Shadow of the Erdtree — Official Gameplay</h3>
+                        <p class="text-xs text-blue-200 mb-3">Explore a Terra das Sombras nesta expansão épica da FromSoftware.</p>
+                        <a href="https://www.youtube.com/watch?v=qLZenOn7WUo" target="_blank" rel="noopener noreferrer" class="text-xs text-blue-400 hover:underline font-semibold">Assistir diretamente no YouTube →</a>
+                    </div>
+                </div>
+
+            </div>
         </section>
 
-        <!-- Seção "Mais Vídeos" (pra preencher depois) -->
-        <section>
-            <h2 class="text-3xl font-bold mb-6">Mais Vídeos</h2>
-            <!-- cards de vídeo aqui (próximo passo) -->
+        <!-- ============ SEÇÃO 3: GAMEPLAYS & ANÁLISES EM VÍDEO (CORRIGIDO) ============ -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-extrabold mb-6 text-white border-b border-blue-900/60 pb-3">
+                Análises & Coberturas Especiais
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <!-- Card de Vídeo 3: Cyberpunk 2077 (ID Corrigido) -->
+                <div class="bg-azul-header rounded-2xl border border-blue-900/50 overflow-hidden shadow-lg p-4 flex flex-col justify-between">
+                    <div class="relative aspect-video w-full rounded-xl overflow-hidden border border-blue-900/40 mb-3 bg-black">
+                        <iframe class="w-full h-full absolute inset-0"
+                            src="https://www.youtube.com/embed/rB1TLiUDLag" 
+                            title="Cyberpunk 2077 Phantom Liberty" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-bold text-cyan-400 uppercase tracking-wider block mb-1">Análise Técnica</span>
+                        <h3 class="font-bold text-base text-white mb-1">Cyberpunk 2077: Phantom Liberty</h3>
+                        <p class="text-xs text-blue-200 mb-2">Teste de desempenho gráfico no PC com Ray Tracing Overdrive.</p>
+                        <a href="https://www.youtube.com/watch?v=rB1TLiUDLag" target="_blank" rel="noopener noreferrer" class="text-xs text-blue-400 hover:underline font-semibold">Ver no YouTube →</a>
+                    </div>
+                </div>
+
+                <!-- Card de Vídeo 4: Silent Hill 2 Remake (ID Corrigido) -->
+                <div class="bg-azul-header rounded-2xl border border-blue-900/50 overflow-hidden shadow-lg p-4 flex flex-col justify-between">
+                    <div class="relative aspect-video w-full rounded-xl overflow-hidden border border-blue-900/40 mb-3 bg-black">
+                        <iframe class="w-full h-full absolute inset-0"
+                            src="https://www.youtube.com/embed/tQdpg4D0clM" 
+                            title="Silent Hill 2 Remake" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-bold text-purple-400 uppercase tracking-wider block mb-1">Terror & Survival</span>
+                        <h3 class="font-bold text-base text-white mb-1">Silent Hill 2 Remake — Gameplay</h3>
+                        <p class="text-xs text-blue-200 mb-2">Revisita ao clássico de terror psicológico refeito na Unreal Engine 5.</p>
+                        <a href="https://www.youtube.com/watch?v=pyC_qiV_4ZY" target="_blank" rel="noopener noreferrer" class="text-xs text-blue-400 hover:underline font-semibold">Ver no YouTube →</a>
+                    </div>
+                </div>
+
+                <!-- Card de Vídeo 5: Valorant Cinematic (ID Corrigido) -->
+                <div class="bg-azul-header rounded-2xl border border-blue-900/50 overflow-hidden shadow-lg p-4 flex flex-col justify-between">
+                    <div class="relative aspect-video w-full rounded-xl overflow-hidden border border-blue-900/40 mb-3 bg-black">
+                        <iframe class="w-full h-full absolute inset-0"
+                            src="https://www.youtube.com/embed/TAAAWu2liT8" 
+                            title="Valorant Cinematic" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-bold text-red-400 uppercase tracking-wider block mb-1">eSports & Lore</span>
+                        <h3 class="font-bold text-base text-white mb-1">VALORANT — Cinematic Oficial</h3>
+                        <p class="text-xs text-blue-200 mb-2">Animação oficial da Riot Games detalhando a nova temporada.</p>
+                        <a href="https://www.youtube.com/watch?v=TAAAWu2liT8" target="_blank" rel="noopener noreferrer" class="text-xs text-blue-400 hover:underline font-semibold">Ver no YouTube →</a>
+                    </div>
+                </div>
+
+            </div>
         </section>
-    
+
     </main>
 
 </body>
