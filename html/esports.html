@@ -98,7 +98,7 @@
         <!-- Campo de Busca na Parte Inferior do Menu -->
         <div class="pt-6 border-t border-blue-900/60">
             <div class="relative">
-                <input type="text" placeholder="Pesquisar eSports..."
+                <input type="text" id="campo-busca" placeholder="Pesquisar eSports..."
                     class="w-full bg-blue-950/80 border border-blue-800/80 rounded-xl px-4 py-2.5 text-xs text-white placeholder-blue-300 focus:outline-none focus:border-blue-400 transition">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 absolute right-3 top-3 text-blue-300" fill="none"
                     viewBox="0 0 24 24" stroke="currentColor">
@@ -121,7 +121,7 @@
         </p>
 
         <!-- DESTAQUE ESPORTS COM IMAGEM -->
-        <article
+        <article data-card
             class="relative h-[440px] rounded-2xl overflow-hidden shadow-2xl mb-12 border border-blue-900/40 group">
             <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80"
                 alt="Arena de eSports - Major de CS2"
@@ -133,7 +133,7 @@
                     class="bg-blue-600 text-white font-bold text-xs uppercase px-3 py-1 rounded-md tracking-wider mb-3 inline-block">
                     CS2 Major Championships
                 </span>
-                <h2 class="text-2xl md:text-4xl font-extrabold text-white leading-tight mb-2">
+                <h2 data-titulo class="text-2xl md:text-4xl font-extrabold text-white leading-tight mb-2">
                     FURIA e MIBR garantem vaga nas etapas finais do Mundial de Counter-Strike 2
                 </h2>
                 <p class="text-blue-200 text-sm md:text-base max-w-3xl">
@@ -208,7 +208,7 @@
             <h2 class="text-2xl font-bold mb-6 text-white border-b border-blue-900/60 pb-3">Últimas do Cenário</h2>
 
             <!-- Matéria 1 -->
-            <article
+            <article data-card
                 class="flex flex-col sm:flex-row gap-6 bg-azul-header rounded-2xl p-5 border border-blue-900/50 hover:bg-blue-900/40 transition group">
                 <div class="w-full sm:w-64 h-44 flex-shrink-0 rounded-xl overflow-hidden border border-blue-900/40">
                     <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80"
@@ -219,7 +219,7 @@
                     <div>
                         <span
                             class="text-xs font-bold text-blue-400 uppercase tracking-wider block mb-1">VALORANT</span>
-                        <h3 class="text-xl font-bold text-white group-hover:text-blue-300 transition mb-2">
+                        <h3 data-titulo class="text-xl font-bold text-white group-hover:text-blue-300 transition mb-2">
                             Riot Games anuncia reformulação no circuito VCT e novo formato de classificação para o
                             Champions
                         </h3>
@@ -237,7 +237,7 @@
             </article>
 
             <!-- Matéria 2 -->
-            <article
+            <article data-card
                 class="flex flex-col sm:flex-row gap-6 bg-azul-header rounded-2xl p-5 border border-blue-900/50 hover:bg-blue-900/40 transition group">
                 <div class="w-full sm:w-64 h-44 flex-shrink-0 rounded-xl overflow-hidden border border-blue-900/40">
                     <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=800&q=80"
@@ -248,7 +248,7 @@
                     <div>
                         <span class="text-xs font-bold text-blue-400 uppercase tracking-wider block mb-1">LEAGUE OF
                             LEGENDS</span>
-                        <h3 class="text-xl font-bold text-white group-hover:text-blue-300 transition mb-2">
+                        <h3 data-titulo class="text-xl font-bold text-white group-hover:text-blue-300 transition mb-2">
                             Faker renova contrato por mais dois anos e busca o sexto título mundial de LoL com a T1
                         </h3>
                         <p class="text-blue-200 text-sm leading-relaxed mb-3">

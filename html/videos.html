@@ -97,7 +97,7 @@
 
         <!-- Campo de Pesquisa -->
         <div class="pt-6 border-t border-blue-900/60">
-            <input type="text" placeholder="Pesquisar vídeos..."
+            <input type="text" id="campo-busca" placeholder="Pesquisar vídeos..."
                 class="w-full bg-blue-950/80 border border-blue-800/80 rounded-xl px-4 py-2.5 text-xs text-white placeholder-blue-300 focus:outline-none focus:border-blue-400 transition">
         </div>
     </aside>
@@ -116,7 +116,7 @@
 
         <!-- ============ SEÇÃO 1: VÍDEO EM DESTAQUE PRINCIPAL ============ -->
         <section class="mb-12">
-            <div class="bg-azul-header rounded-2xl p-6 border border-blue-900/50 shadow-2xl">
+            <div data-card class="bg-azul-header rounded-2xl p-6 border border-blue-900/50 shadow-2xl">
                 <div class="flex items-center justify-between mb-4">
                     <span
                         class="bg-red-600 text-white font-extrabold text-xs uppercase px-3 py-1 rounded-md tracking-wider">
@@ -137,7 +137,7 @@
 
                 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                     <div>
-                        <h2 class="text-2xl md:text-3xl font-extrabold text-white mb-2 leading-tight">
+                        <h2 data-titulo class="text-2xl md:text-3xl font-extrabold text-white mb-2 leading-tight">
                             Grand Theft Auto VI — Trailer Oficial de Revelação
                         </h2>
                         <p class="text-blue-100 text-sm leading-relaxed">
@@ -161,7 +161,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
                 <!-- Card de Vídeo 1: Black Myth Wukong -->
-                <div
+                <div data-card
                     class="bg-azul-header rounded-2xl border border-blue-900/50 overflow-hidden shadow-lg p-4 flex flex-col justify-between">
                     <div
                         class="relative aspect-video w-full rounded-xl overflow-hidden border border-blue-900/40 mb-3 bg-black">
@@ -174,7 +174,8 @@
                     <div>
                         <span class="text-[11px] font-bold text-blue-400 uppercase tracking-wider block mb-1">Gameplay
                             Trailer</span>
-                        <h3 class="font-bold text-lg text-white mb-1">Black Myth: Wukong — Gameplay de Apresentação</h3>
+                        <h3 data-titulo class="font-bold text-lg text-white mb-1">Black Myth: Wukong — Gameplay de
+                            Apresentação</h3>
                         <p class="text-xs text-blue-200 mb-3">Confira o combate impressionante na Unreal Engine 5 e o
                             confronto contra chefes lendários.</p>
                         <a href="https://www.youtube.com/watch?v=O2nNljv0MOw" target="_blank" rel="noopener noreferrer"
@@ -184,7 +185,7 @@
                 </div>
 
                 <!-- Card de Vídeo 2: Elden Ring Shadow of the Erdtree -->
-                <div
+                <div data-card
                     class="bg-azul-header rounded-2xl border border-blue-900/50 overflow-hidden shadow-lg p-4 flex flex-col justify-between">
                     <div
                         class="relative aspect-video w-full rounded-xl overflow-hidden border border-blue-900/40 mb-3 bg-black">
@@ -197,7 +198,8 @@
                     <div>
                         <span class="text-[11px] font-bold text-blue-400 uppercase tracking-wider block mb-1">Expansão
                             DLC</span>
-                        <h3 class="font-bold text-lg text-white mb-1">Elden Ring: Shadow of the Erdtree — Official
+                        <h3 data-titulo class="font-bold text-lg text-white mb-1">Elden Ring: Shadow of the Erdtree —
+                            Official
                             Gameplay</h3>
                         <p class="text-xs text-blue-200 mb-3">Explore a Terra das Sombras nesta expansão épica da
                             FromSoftware.</p>
@@ -219,7 +221,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
                 <!-- Card de Vídeo 3: Cyberpunk 2077 -->
-                <div
+                <div data-card
                     class="bg-azul-header rounded-2xl border border-blue-900/50 overflow-hidden shadow-lg p-4 flex flex-col justify-between">
                     <div
                         class="relative aspect-video w-full rounded-xl overflow-hidden border border-blue-900/40 mb-3 bg-black">
@@ -232,7 +234,7 @@
                     <div>
                         <span class="text-[10px] font-bold text-cyan-400 uppercase tracking-wider block mb-1">Análise
                             Técnica</span>
-                        <h3 class="font-bold text-base text-white mb-1">Cyberpunk 2077: Phantom Liberty</h3>
+                        <h3 data-titulo class="font-bold text-base text-white mb-1">Cyberpunk 2077: Phantom Liberty</h3>
                         <p class="text-xs text-blue-200 mb-2">Teste de desempenho gráfico no PC com Ray Tracing
                             Overdrive.</p>
                         <a href="https://www.youtube.com/watch?v=rB1TLiUDLag" target="_blank" rel="noopener noreferrer"
@@ -241,7 +243,7 @@
                 </div>
 
                 <!-- Card de Vídeo 4: Silent Hill 2 Remake -->
-                <div
+                <div data-card
                     class="bg-azul-header rounded-2xl border border-blue-900/50 overflow-hidden shadow-lg p-4 flex flex-col justify-between">
                     <div
                         class="relative aspect-video w-full rounded-xl overflow-hidden border border-blue-900/40 mb-3 bg-black">
@@ -254,7 +256,7 @@
                     <div>
                         <span class="text-[10px] font-bold text-purple-400 uppercase tracking-wider block mb-1">Terror &
                             Survival</span>
-                        <h3 class="font-bold text-base text-white mb-1">Silent Hill 2 Remake — Gameplay</h3>
+                        <h3 data-titulo class="font-bold text-base text-white mb-1">Silent Hill 2 Remake — Gameplay</h3>
                         <p class="text-xs text-blue-200 mb-2">Revisita ao clássico de terror psicológico refeito na
                             Unreal Engine 5.</p>
                         <a href="https://www.youtube.com/watch?v=pyC_qiV_4ZY" target="_blank" rel="noopener noreferrer"
@@ -263,7 +265,7 @@
                 </div>
 
                 <!-- Card de Vídeo 5: Valorant Cinematic -->
-                <div
+                <div data-card
                     class="bg-azul-header rounded-2xl border border-blue-900/50 overflow-hidden shadow-lg p-4 flex flex-col justify-between">
                     <div
                         class="relative aspect-video w-full rounded-xl overflow-hidden border border-blue-900/40 mb-3 bg-black">
@@ -276,7 +278,7 @@
                     <div>
                         <span class="text-[10px] font-bold text-red-400 uppercase tracking-wider block mb-1">eSports &
                             Lore</span>
-                        <h3 class="font-bold text-base text-white mb-1">VALORANT — Cinematic Oficial</h3>
+                        <h3 data-titulo class="font-bold text-base text-white mb-1">VALORANT — Cinematic Oficial</h3>
                         <p class="text-xs text-blue-200 mb-2">Animação oficial da Riot Games detalhando a nova
                             temporada.</p>
                         <a href="https://www.youtube.com/watch?v=TAAAWu2liT8" target="_blank" rel="noopener noreferrer"

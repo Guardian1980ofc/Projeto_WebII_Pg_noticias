@@ -97,7 +97,7 @@
         <!-- Campo de Busca na Parte Inferior do Menu -->
         <div class="pt-6 border-t border-blue-900/60">
             <div class="relative">
-                <input type="text" placeholder="Pesquisar notícias..."
+                <input type="text" id="campo-busca" placeholder="Pesquisar notícias..."
                     class="w-full bg-blue-950/80 border border-blue-800/80 rounded-xl px-4 py-2.5 text-xs text-white placeholder-blue-300 focus:outline-none focus:border-blue-400 transition">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 absolute right-3 top-3 text-blue-300" fill="none"
                     viewBox="0 0 24 24" stroke="currentColor">
@@ -116,7 +116,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
 
                 <!-- CARD 1: The Witcher 3 -->
-                <article
+                <article data-card
                     class="relative h-[440px] rounded-2xl overflow-hidden shadow-2xl group cursor-pointer border border-blue-900/30">
                     <img src="https://i.pinimg.com/736x/28/66/b4/2866b46869a99deb4f09ca23ca39d948.jpg"
                         alt="The Witcher 3"
@@ -129,7 +129,7 @@
 
                     <div
                         class="absolute bottom-0 left-0 right-0 p-5 bg-blue-950/80 backdrop-blur-sm border-t border-blue-900/50">
-                        <h3
+                        <h3 data-titulo
                             class="text-sm md:text-base font-bold leading-snug text-white group-hover:text-blue-300 transition">
                             Horários de lançamento da versão remasterizada de The Witcher 3: Wild Hunt são confirmados
                         </h3>
@@ -137,7 +137,7 @@
                 </article>
 
                 <!-- CARD 2: Halo -->
-                <article
+                <article data-card
                     class="relative h-[440px] rounded-2xl overflow-hidden shadow-2xl group cursor-pointer border border-blue-900/30">
                     <img src="https://i.pinimg.com/736x/1f/91/1c/1f911cc75cbffd759cd923b3ecc695d1.jpg" alt="Halo"
                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -149,7 +149,7 @@
 
                     <div
                         class="absolute bottom-0 left-0 right-0 p-5 bg-blue-950/80 backdrop-blur-sm border-t border-blue-900/50">
-                        <h3
+                        <h3 data-titulo
                             class="text-sm md:text-base font-bold leading-snug text-white group-hover:text-blue-300 transition">
                             Halo com Activision faz sentido comercialmente, mas é suficiente para salvar a franquia?
                         </h3>
@@ -157,7 +157,7 @@
                 </article>
 
                 <!-- CARD 3: Rayman -->
-                <article
+                <article data-card
                     class="relative h-[440px] rounded-2xl overflow-hidden shadow-2xl group cursor-pointer border border-blue-900/30">
                     <img src="https://i.pinimg.com/1200x/8a/af/9f/8aaf9f67bc0ff1b1a8ea4429e9694817.jpg"
                         alt="Rayman Legends Retold"
@@ -170,7 +170,7 @@
 
                     <div
                         class="absolute bottom-0 left-0 right-0 p-5 bg-blue-950/80 backdrop-blur-sm border-t border-blue-900/50">
-                        <h3
+                        <h3 data-titulo
                             class="text-sm md:text-base font-bold leading-snug text-white group-hover:text-blue-300 transition">
                             Rayman Legends Retold inova sem perder a essência do original | Preview
                         </h3>
@@ -178,7 +178,7 @@
                 </article>
 
                 <!-- CARD 4: Silent Hill -->
-                <article
+                <article data-card
                     class="relative h-[440px] rounded-2xl overflow-hidden shadow-2xl group cursor-pointer border border-blue-900/30">
                     <img src="https://i.pinimg.com/736x/01/4d/b0/014db0c2cc251b3dc354221fa8be8302.jpg"
                         alt="Silent Hill Townfall"
@@ -191,7 +191,7 @@
 
                     <div
                         class="absolute bottom-0 left-0 right-0 p-5 bg-blue-950/80 backdrop-blur-sm border-t border-blue-900/50">
-                        <h3
+                        <h3 data-titulo
                             class="text-sm md:text-base font-bold leading-snug text-white group-hover:text-blue-300 transition">
                             Silent Hill: Townfall tem narrativa contida e não brilha tanto dentro da franquia
                         </h3>
@@ -208,49 +208,53 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
                 <!-- Item 1 -->
-                <a href="noticias/halo-activision.html" class="group no-underline block">
+                <a href="noticias/halo-activision.html" data-card class="group no-underline block">
                     <div class="overflow-hidden rounded-xl mb-3 h-44 border border-blue-900/40">
                         <img src="https://i.pinimg.com/736x/12/37/a0/1237a0fa0c291f0eefb7f30da0d9aed4.jpg"
                             alt="Halo Campaign Evolved"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                     </div>
-                    <h3 class="text-sm font-bold text-white group-hover:text-blue-300 transition leading-snug">
+                    <h3 data-titulo
+                        class="text-sm font-bold text-white group-hover:text-blue-300 transition leading-snug">
                         Halo: Campaign Evolved abre portas para reestruturações no ecossistema Xbox
                     </h3>
                 </a>
 
                 <!-- Item 2 -->
-                <a href="noticias/rayman-legends.html" class="group no-underline block">
+                <a href="noticias/rayman-legends.html" data-card class="group no-underline block">
                     <div class="overflow-hidden rounded-xl mb-3 h-44 border border-blue-900/40">
                         <img src="https://i.pinimg.com/1200x/ae/69/72/ae697294bb7026d19b2615e2be8cac83.jpg"
                             alt="Rayman Fases Musicais"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                     </div>
-                    <h3 class="text-sm font-bold text-white group-hover:text-blue-300 transition leading-snug">
+                    <h3 data-titulo
+                        class="text-sm font-bold text-white group-hover:text-blue-300 transition leading-snug">
                         Como as fases musicais de Rayman redefiniram o gênero de plataforma
                     </h3>
                 </a>
 
                 <!-- Item 3 -->
-                <a href="noticias/silent-hill-townfall.html" class="group no-underline block">
+                <a href="noticias/silent-hill-townfall.html" data-card class="group no-underline block">
                     <div class="overflow-hidden rounded-xl mb-3 h-44 border border-blue-900/40">
                         <img src="https://i.pinimg.com/736x/dc/aa/44/dcaa4413b64679a9b57fe6df6515c792.jpg"
                             alt="Silent Hill Terror"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                     </div>
-                    <h3 class="text-sm font-bold text-white group-hover:text-blue-300 transition leading-snug">
+                    <h3 data-titulo
+                        class="text-sm font-bold text-white group-hover:text-blue-300 transition leading-snug">
                         Silent Hill retoma raízes do terror psicológico sem depender de combate
                     </h3>
                 </a>
 
                 <!-- Item 4 -->
-                <a href="noticias/witcher-3-remaster.html" class="group no-underline block">
+                <a href="noticias/witcher-3-remaster.html" data-card class="group no-underline block">
                     <div class="overflow-hidden rounded-xl mb-3 h-44 border border-blue-900/40">
                         <img src="https://i.pinimg.com/1200x/24/54/e4/2454e45b67b657e152d924a99c032d25.jpg"
                             alt="The Witcher 3 Remastered"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                     </div>
-                    <h3 class="text-sm font-bold text-white group-hover:text-blue-300 transition leading-snug">
+                    <h3 data-titulo
+                        class="text-sm font-bold text-white group-hover:text-blue-300 transition leading-snug">
                         Tudo sobre as novidades gráficas e mecânicas da atualização de The Witcher 3
                     </h3>
                 </a>

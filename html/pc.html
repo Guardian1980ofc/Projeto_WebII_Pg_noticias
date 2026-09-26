@@ -98,7 +98,7 @@
         <!-- Campo de Busca na Parte Inferior do Menu -->
         <div class="pt-6 border-t border-blue-900/60">
             <div class="relative">
-                <input type="text" placeholder="Pesquisar PC..."
+                <input type="text" id="campo-busca" placeholder="Pesquisar PC..."
                     class="w-full bg-blue-950/80 border border-blue-800/80 rounded-xl px-4 py-2.5 text-xs text-white placeholder-blue-300 focus:outline-none focus:border-blue-400 transition">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 absolute right-3 top-3 text-blue-300" fill="none"
                     viewBox="0 0 24 24" stroke="currentColor">
@@ -121,7 +121,7 @@
         </p>
 
         <!-- DESTAQUE HARDWARE COM IMAGEM -->
-        <article
+        <article data-card
             class="relative h-[440px] rounded-2xl overflow-hidden shadow-2xl mb-12 border border-blue-900/40 group">
             <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=1200&q=80"
                 alt="Hardware e GPUs de alta performance"
@@ -133,7 +133,7 @@
                     class="bg-cyan-600 text-white font-bold text-xs uppercase px-3 py-1 rounded-md tracking-wider mb-3 inline-block">
                     Análise Tecnológica
                 </span>
-                <h2 class="text-2xl md:text-4xl font-extrabold text-white leading-tight mb-2">
+                <h2 data-titulo class="text-2xl md:text-4xl font-extrabold text-white leading-tight mb-2">
                     NVIDIA GeForce RTX série 5000: Vale a pena o upgrade para jogar em 4K e Ray Tracing nativo?
                 </h2>
                 <p class="text-blue-200 text-sm md:text-base max-w-3xl">
@@ -147,7 +147,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
 
             <!-- Card Guia 1 -->
-            <div
+            <div data-card
                 class="bg-azul-header rounded-2xl border border-blue-900/50 overflow-hidden flex flex-col justify-between group">
                 <div class="h-48 overflow-hidden relative">
                     <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=800&q=80"
@@ -159,7 +159,7 @@
                     </span>
                 </div>
                 <div class="p-6">
-                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition">
+                    <h3 data-titulo class="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition">
                         Como escolher o melhor processador para jogos em 2026
                     </h3>
                     <p class="text-sm text-blue-200 mb-4">
@@ -172,7 +172,7 @@
             </div>
 
             <!-- Card Guia 2 -->
-            <div
+            <div data-card
                 class="bg-azul-header rounded-2xl border border-blue-900/50 overflow-hidden flex flex-col justify-between group">
                 <div class="h-48 overflow-hidden relative">
                     <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80"
@@ -184,7 +184,7 @@
                     </span>
                 </div>
                 <div class="p-6">
-                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition">
+                    <h3 data-titulo class="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition">
                         Aumente os FPS no Windows 11 com essas configurações simples
                     </h3>
                     <p class="text-sm text-blue-200 mb-4">
@@ -202,7 +202,7 @@
 
         <div class="space-y-6">
 
-            <article
+            <article data-card
                 class="flex flex-col sm:flex-row gap-6 bg-azul-header rounded-2xl p-5 border border-blue-900/50 hover:bg-blue-900/40 transition group">
                 <div class="w-full sm:w-64 h-44 flex-shrink-0 rounded-xl overflow-hidden border border-blue-900/40">
                     <img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?auto=format&fit=crop&w=800&q=80"
@@ -213,7 +213,7 @@
                     <div>
                         <span
                             class="text-xs font-bold text-blue-400 uppercase tracking-wider block mb-1">PORTÁTEIS</span>
-                        <h3 class="text-xl font-bold text-white group-hover:text-blue-300 transition mb-2">
+                        <h3 data-titulo class="text-xl font-bold text-white group-hover:text-blue-300 transition mb-2">
                             Valve confirma desenvolvimento do Steam Deck 2 com tela OLED de maior taxa de atualização
                         </h3>
                         <p class="text-blue-200 text-sm leading-relaxed mb-3">
