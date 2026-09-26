@@ -24,8 +24,17 @@
 
 <body class="bg-azul-profundo text-white min-h-screen flex">
 
+    <!-- Botão flutuante para reabrir a sidebar -->
+    <button id="btn-sidebar-open"
+        class="fixed top-4 left-4 z-50 hidden bg-azul-header hover:bg-blue-900/60 text-blue-300 hover:text-white p-2 rounded-lg border border-blue-900/60 shadow-lg transition"
+        aria-label="Abrir menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+    </button>
+
     <!-- ==================== BARRA LATERAL (SIDEBAR LEFT) ==================== -->
-    <aside
+    <aside id="sidebar"
         class="w-64 bg-azul-header min-h-screen shrink-0 p-5 border-r border-blue-900/40 flex flex-col justify-between sticky top-0 h-screen overflow-y-auto">
         <div>
             <!-- Header do Menu com Logo -->
@@ -34,7 +43,8 @@
                     class="text-2xl font-black text-white hover:text-blue-300 transition no-underline tracking-tight">
                     Web News
                 </a>
-                <button class="text-blue-300 hover:text-white p-1 rounded-lg hover:bg-blue-900/50 transition">
+                <button id="btn-sidebar-close"
+                    class="text-blue-300 hover:text-white p-1 rounded-lg hover:bg-blue-900/50 transition">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
@@ -207,6 +217,15 @@
         </article>
 
     </main>
+
+    <!-- Botão Voltar ao Topo -->
+    <button id="btn-topo"
+        class="fixed bottom-6 right-6 z-50 hidden bg-blue-600 hover:bg-blue-500 text-white p-4 rounded-full shadow-2xl transition"
+        aria-label="Voltar ao topo">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
 
     <!-- JavaScript do site -->
     <script src="../../js/script.js"></script>
