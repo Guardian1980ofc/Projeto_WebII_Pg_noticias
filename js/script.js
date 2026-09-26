@@ -1,26 +1,38 @@
 // ============================================================
-// EFEITO DE ZOOM NOS CARDS DE NOTÍCIA
-// Quando o mouse passa sobre o card, a imagem dá um zoom suave.
-// Quando sai, volta ao normal.
+// WEB NEWS - SCRIPT PRINCIPAL
 // ============================================================
 
-// 1. Pega todos os cards da página
-const cards = document.querySelectorAll('.card-noticia');
+console.log('Script do Web News carregado!');
 
-// 2. Pra cada card, adiciona os eventos de mouse
-cards.forEach(card => {
+// ============================================================
+// FUNCIONALIDADE 1: BOTÃO VOLTAR AO TOPO
+// ============================================================
+// Um botão flutuante que aparece quando o usuário rola a página
+// pra baixo e volta suavemente ao topo quando clicado.
+// ============================================================
 
-    // Pega a imagem dentro deste card específico
-    const imagem = card.querySelector('.card-imagem');
+// Pega o botão pelo ID
+const btnTopo = document.getElementById('btn-topo');
 
-    // Quando o mouse ENTRA no card
-    card.addEventListener('mouseenter', () => {
-        imagem.classList.add('scale-110');   // dá zoom na imagem
+// Escuta o evento de "scroll" da página
+window.addEventListener('scroll', () => {
+
+    // Se o usuário rolou mais de 400px pra baixo...
+    if (window.scrollY > 400) {
+        // Mostra o botão (remove a classe 'hidden')
+        btnTopo.classList.remove('hidden');
+    } else {
+        // Esconde o botão (adiciona a classe 'hidden' de volta)
+        btnTopo.classList.add('hidden');
+    }
+});
+
+// Escuta o clique no botão
+btnTopo.addEventListener('click', () => {
+
+    // Rola suavemente até o topo da página
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
     });
-
-    // Quando o mouse SAI do card
-    card.addEventListener('mouseleave', () => {
-        imagem.classList.remove('scale-110'); // tira o zoom
-    });
-
 });
